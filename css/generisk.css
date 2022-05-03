@@ -1,22 +1,27 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: SansSerif;
+    background-color: lightgreen;
 }
 header{
-background-color: plum;
-
-
+    background-color: gold;
+    text-align: center;
+    padding: 30px 0;
 
 }
 header.navigationbar{
+    background-color: darkseagreen;
+    text-align: center;
+
 
 }
 header.navOptions{
-
+    font-size: 35px;
+    display: inline;
+    overflow: hidden;
+    padding: 30px 0;
 }
-
 footer{
 
 
