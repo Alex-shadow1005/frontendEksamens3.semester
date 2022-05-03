@@ -1,0 +1,202 @@
+Index: html/index.html
+===================================================================
+diff --git a/html/index.html b/html/index.html
+deleted file mode 100644
+--- a/html/index.html	
++++ /dev/null	
+@@ -1,20 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <title>Title</title>
+-</head>
+-<body>
+-<div id="header"></div>
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-<div id="footer"></div>
+-</body>
+-</html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/html/footer.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/html/footer.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/html/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/html/index.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"master\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/html\" />\n      <recent name=\"$PROJECT_DIR$/css\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n      <workItem from=\"1651561663420\" duration=\"871000\" />\n      <workItem from=\"1651563857000\" duration=\"609000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"oprettet html sider + css\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"oprettet html sider + css\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,11 +4,21 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="facebookicon + footer">
++      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/js/headerFooter.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/frontendEksamens3.semester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/frontendEksamens3.semester.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/galleri.html" beforeDir="false" afterPath="$PROJECT_DIR$/galleri.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/hold.html" beforeDir="false" afterPath="$PROJECT_DIR$/hold.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/kontakt.html" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/omOs.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/priser.html" beforeDir="false" afterPath="$PROJECT_DIR$/priser.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,8 +28,9 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="CSS File" />
+         <option value="HTML File" />
++        <option value="CSS File" />
++        <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+@@ -56,11 +67,16 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
+       <recent name="$PROJECT_DIR$/html" />
+       <recent name="$PROJECT_DIR$/css" />
+-      <recent name="$PROJECT_DIR$" />
+     </key>
+   </component>
++  <component name="RunManager">
++    <configuration name="Unnamed" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
++      <method v="2" />
++    </configuration>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -72,6 +88,21 @@
+       <workItem from="1651561663420" duration="871000" />
+       <workItem from="1651563857000" duration="609000" />
+     </task>
++    <task id="LOCAL-00001" summary="facebookicon + footer">
++      <created>1651568844406</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1651568844406</updated>
++    </task>
++    <task id="LOCAL-00002" summary="facebookicon + footer">
++      <created>1651568946539</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1651568946539</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -90,6 +121,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="oprettet html sider + css" />
+-    <option name="LAST_COMMIT_MESSAGE" value="oprettet html sider + css" />
++    <MESSAGE value="facebookicon + footer" />
++    <option name="LAST_COMMIT_MESSAGE" value="facebookicon + footer" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: js/headerFooter.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/headerFooter.js b/js/headerFooter.js
+new file mode 100644
+--- /dev/null	
++++ b/js/headerFooter.js	
+@@ -0,0 +1,4 @@
++$(function () {
++    $("#header").load("header.html");
++    $("#footer").load("footer.html");
++});
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+new file mode 100644
+--- /dev/null	
++++ b/index.html	
+@@ -0,0 +1,33 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++    <link rel="stylesheet" href="css/index.css">
++    <link rel="stylesheet" href="css/generisk.css">
++
++    <script src="js/headerFooter.js"></script>
++    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
++
++</head>
++
++<body>
++<div id="header"></div>
++
++<section class="velkommen-section">
++<h2>Velkommen</h2>
++
++<div class="introduktion">
++
++
++</div>
++</section>
++<section class="billede-section">
++    <h2>hej</h2>
++
++
++
++</section>
++<div id="footer"></div>
++</body>
++</html>
+\ No newline at end of file
+Index: frontendEksamens3.semester.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"WEB_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontendEksamens3.semester.iml b/frontendEksamens3.semester.iml
+--- a/frontendEksamens3.semester.iml	
++++ b/frontendEksamens3.semester.iml	
+@@ -4,5 +4,6 @@
+     <exclude-output />
+     <content url="file://$MODULE_DIR$" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="jquery" level="application" />
+   </component>
+ </module>
+\ No newline at end of file
+diff --git a/css/index.css b/css/index.css
+new file mode 100644
