@@ -1,12 +1,10 @@
 *{
-    font-family: SansSerif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
-
 }
 header{
-    background-color:#3D4C31;
+    background-color:#433310;
     text-align: center;
     font-size: 26px;
     display: inline;
@@ -16,8 +14,7 @@ header{
     list-style-type: none;
     overflow: hidden;
     text-decoration: none;
-    font-family: SansSerif;
-
+    font-family: sans-serif;
 
 }
 
