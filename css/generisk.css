@@ -2,32 +2,52 @@
     font-family: SansSerif;
     margin: 0;
     padding: 0;
+    color: white;
 
 }
 header{
     background-color:#3D4C31;
     text-align: center;
-    padding: 50px 0;
-    word-spacing: 80px;
-    font-size: 30px;
+    font-size: 26px;
+    display: inline;
+    float: left;
+    padding-top:0px;
+    padding-bottom: 30px;
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: SansSerif;
+
 
 }
 
-header.navigationbar{
+header.navigationbar span{
     display: inline;
     float: left;
-    padding: 14px 16px;
     list-style-type: none;
     overflow: hidden;
     text-decoration: none;
     font-family: Seravek;
+    word-spacing: 90px;
 }
 
 header.logo{
+  width: 100%;
+}
+
+footer {
+    background-color: #3D4C31;
+    padding: 80px;
+    text-align: center;
+    font-size: 26px;
+}
+.contact-right{
+    float: right;
+
+}
+.contact-left{
+    float: left;
 
 }
 
-footer{
 
-
-}
