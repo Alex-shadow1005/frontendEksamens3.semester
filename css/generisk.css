@@ -1,0 +1,33 @@
+*{
+    font-family: SansSerif;
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    background-color:#3D4C31;
+    text-align: center;
+    padding: 50px 0;
+    word-spacing: 80px;
+    font-size: 30px;
+
+}
+
+header.navigationbar{
+    display: inline;
+    float: left;
+    padding: 14px 16px;
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: Seravek;
+}
+
+header.logo{
+
+}
+
+footer{
+
+
+}
