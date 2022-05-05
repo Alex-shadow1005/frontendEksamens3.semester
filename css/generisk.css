@@ -1,10 +1,9 @@
 *{
-    font-family: SansSerif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
-
 }
+
 header{
     background-color:#3D4C31;
     text-align: center;
@@ -16,9 +15,7 @@ header{
     list-style-type: none;
     overflow: hidden;
     text-decoration: none;
-    font-family: SansSerif;
-
-
+    font-family: sans-serif;
 }
 
 header.navigationbar span{
