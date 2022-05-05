@@ -1,28 +1,50 @@
 *{
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    font-family: SansSerif;
-    background-color: lightgreen;
 }
 header{
-    background-color: gold;
+    background-color:#433310;
     text-align: center;
-    padding: 30px 0;
-
-}
-header.navigationbar{
-    background-color: darkseagreen;
-    text-align: center;
-
-
-}
-header.navOptions{
-    font-size: 35px;
+    font-size: 26px;
     display: inline;
+    float: left;
+    padding-top:0px;
+    padding-bottom: 30px;
+    list-style-type: none;
     overflow: hidden;
-    padding: 30px 0;
-}
-footer{
-
+    text-decoration: none;
+    font-family: sans-serif;
 
 }
+
+header.navigationbar span{
+    display: inline;
+    float: left;
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: Seravek;
+    word-spacing: 90px;
+}
+
+header.logo{
+  width: 100%;
+}
+
+footer {
+    background-color: #3D4C31;
+    padding: 80px;
+    text-align: center;
+    font-size: 26px;
+}
+.contact-right{
+    float: right;
+
+}
+.contact-left{
+    float: left;
+
+}
+
+

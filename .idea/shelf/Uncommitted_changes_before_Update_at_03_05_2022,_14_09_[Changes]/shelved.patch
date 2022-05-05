@@ -1,0 +1,87 @@
+Index: css/generisk.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*{\n    margin: 0;\n    padding: 0;\n    font-family: SansSerif;\n    background-color: lightgreen;\n}\nheader{\n    background-color: gold;\n    text-align: center;\n    padding: 30px 0;\n\n}\nheader.navigationbar{\n    background-color: darkseagreen;\n    text-align: center;\n\n\n}\nheader.navOptions{\n    font-size: 35px;\n    display: inline;\n    overflow: hidden;\n    padding: 30px 0;\n}\nfooter{\n\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/generisk.css b/css/generisk.css
+--- a/css/generisk.css	(revision 6e0931330e61b22960e8be4a497f0c2be4c3285e)
++++ b/css/generisk.css	(date 1651579574310)
+@@ -8,19 +8,23 @@
+     background-color: gold;
+     text-align: center;
+     padding: 30px 0;
+-
++    display: block;
++    text-decoration: none;
+ }
+ header.navigationbar{
+-    background-color: darkseagreen;
+     text-align: center;
+-
++    display:block;
+ 
+ }
+ header.navOptions{
++
+     font-size: 35px;
+-    display: inline;
++    padding: 30px 0;
++    list-style-type: none;
+     overflow: hidden;
+-    padding: 30px 0;
++    display:block;
++    text-align: center;
++    text-decoration: none;
+ }
+ footer{
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"generisk funktion\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/header.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"Emma\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6e0931330e61b22960e8be4a497f0c2be4c3285e)
++++ b/.idea/workspace.xml	(date 1651578788404)
+@@ -4,11 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="generisk funktion">
++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="css til index">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -47,6 +45,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1651331471949</updated>
+     </task>
++    <task id="LOCAL-00001" summary="css til index">
++      <created>1651578228812</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1651578228812</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -60,4 +66,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="css til index" />
++    <option name="LAST_COMMIT_MESSAGE" value="css til index" />
++  </component>
+ </project>
+\ No newline at end of file
