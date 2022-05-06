@@ -29,7 +29,6 @@ span{
     padding: 40px;
     padding-top: 30px;
 
-
 }
 a{
     text-decoration: none;
@@ -48,13 +47,14 @@ footer {
 .contact-right{
     float: right;
 
+
 }
 .contact-left{
     float: left;
 
 
 }
-button{
+.footerbutton{
     padding: 10px;
     border-radius: 8px;
     background-color: white;
