@@ -5,7 +5,7 @@
 }
 
 header{
-    background-color:#3D4C31;
+    background-color:#433310;
     text-align: center;
     font-size: 26px;
     display: inline;
@@ -14,20 +14,27 @@ header{
     padding-bottom: 30px;
     list-style-type: none;
     overflow: hidden;
-    text-decoration: none;
-    font-family: sans-serif;
+
 }
 
-header.navigationbar span{
+header.navigationbar{
     display: inline;
     float: left;
     list-style-type: none;
     overflow: hidden;
-    text-decoration: none;
-    font-family: Seravek;
-    word-spacing: 90px;
-}
 
+}
+span{
+    text-decoration: none;
+    padding: 40px;
+    padding-top: 30px;
+
+
+}
+a{
+    text-decoration: none;
+
+}
 header.logo{
   width: 100%;
 }
@@ -44,6 +51,19 @@ footer {
 }
 .contact-left{
     float: left;
+
+
+}
+button{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+
+}
+input{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
 
 }
 
