@@ -1,12 +1,12 @@
 *{
-    font-family: SansSerif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
-
 }
+
 header{
-    background-color:#3D4C31;
+    background-color:#433310;
+    color: white;
     text-align: center;
     font-size: 26px;
     display: inline;
@@ -15,38 +15,62 @@ header{
     padding-bottom: 30px;
     list-style-type: none;
     overflow: hidden;
-    text-decoration: none;
-    font-family: SansSerif;
-
 
 }
 
-header.navigationbar span{
+header.navigationbar{
     display: inline;
     float: left;
     list-style-type: none;
     overflow: hidden;
-    text-decoration: none;
-    font-family: Seravek;
-    word-spacing: 90px;
-}
 
+
+
+}
+span{
+    text-decoration: none;
+    padding: 40px;
+    padding-top: 30px;
+    color: white;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
 header.logo{
   width: 100%;
+  border: 60px;
+    border-color: gold;
 }
 
 footer {
     background-color: #3D4C31;
-    padding: 80px;
+    padding: 100px;
     text-align: center;
     font-size: 26px;
 }
 .contact-right{
     float: right;
 
+
 }
 .contact-left{
     float: left;
+
+
+}
+.footerbutton{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+
+}
+input{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
 
 }
 
