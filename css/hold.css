@@ -9,6 +9,7 @@
 }
 
 .holdbutton{
+    border-radius: 10px;
     border: 2px solid #facd8a;
     width: 25%;
     height: 30px;
