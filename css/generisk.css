@@ -6,6 +6,7 @@
 
 header{
     background-color:#433310;
+    color: white;
     text-align: center;
     font-size: 26px;
     display: inline;
@@ -23,24 +24,30 @@ header.navigationbar{
     list-style-type: none;
     overflow: hidden;
 
+
+
 }
 span{
     text-decoration: none;
     padding: 40px;
     padding-top: 30px;
+    color: white;
 
 }
 a{
     text-decoration: none;
+    color: white;
 
 }
 header.logo{
   width: 100%;
+  border: 60px;
+    border-color: gold;
 }
 
 footer {
     background-color: #3D4C31;
-    padding: 80px;
+    padding: 100px;
     text-align: center;
     font-size: 26px;
 }
