@@ -1,0 +1,197 @@
+Index: css/index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/index.css b/css/index.css
+--- a/css/index.css	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
++++ b/css/index.css	(date 1651657198806)
+@@ -1,1 +1,35 @@
++*{
++    margin: 0;
++    padding: 0;
++    font-family: sans-serif;
++
++}
++
++.velkomst-section h2{
++    font-family: sans-serif;
++    color: white;
++    background-color: #303030;
++    font-size: 5em;
++    display: block;
++    position: relative;
++    text-align: center;
++
++
++}
++
++.velkomst-section div{
++    font-family: sans-serif;
++    color: white;
++    background-color: #303030;
++    font-size: 2em;
++    text-align: center;
++    padding-bottom: 15cm;
++}
++
++section{
++    padding: 5em 2em;}
++
++.row{
++
++}
+ 
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js\"></script>\n    <script src=\"headerfooter.js\"></script>\n    <link rel=\"stylesheet\" href=\"css/index.css\">\n    <link rel=\"stylesheet\" href=\"css/generisk.css\">\n\n</head>\n<body>\n\n\n<div id=\"header\"></div>\n\n<section class=\"velkomst-section\">\n    <h2>Velkommen</h2>\n    <div>uhefghouehgowogh</div>\n</section>\n\n\n<section class=\"billedelink-section\">\n    <div class=\"container-billedelink\">\n        <div class=\"row\">\n            <ul>\n                <li><a href=\"https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_footer_css\" src=\"img/\">Hos\n                    os</a>Om Os\n                </li>\n                <li><a href=\"#\" src=\"img\"></a></li>\n            </ul>\n        </div>\n        <div class=\"row\">\n            <ul>\n        <li><a href=\"#\" src=\"img\"></a></li>\n        <li><a href=\"#\" src=\"img\"></a></li>\n            </ul>\n        </div>\n    </div>\n</section>\n\n<div id=\"footer\"></div>\n\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
++++ b/index.html	(date 1651655533040)
+@@ -16,7 +16,10 @@
+ 
+ <section class="velkomst-section">
+     <h2>Velkommen</h2>
+-    <div>uhefghouehgowogh</div>
++    <div>uhefghouehgowogh
++    sgjnsgnngeg
++    ljsnlgknjgn
++    ljsgo</div>
+ </section>
+ 
+ 
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
++++ /dev/null	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_03_05_2022,_14_09_[Changes]" date="1651579803035" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022,_14_09_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 03/05/2022, 14.09 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n  <component name=\"SwUserDefinedSpecifications\">\n    <option name=\"specTypeByUrl\">\n      <map />\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
++++ b/.idea/misc.xml	(date 1651652317413)
+@@ -3,6 +3,9 @@
+   <component name="ProjectRootManager">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
++  <component name="ProjectType">
++    <option name="id" value="jpab" />
++  </component>
+   <component name="SwUserDefinedSpecifications">
+     <option name="specTypeByUrl">
+       <map />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"css til header\">\n      <change afterPath=\"$PROJECT_DIR$/css/index.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/image/logo.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/image/logo1.png\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/header.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"Emma\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/image\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\n      <created>1651579826498</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651579826498</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"css til header\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"css til header\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
++++ b/.idea/workspace.xml	(date 1651655808334)
+@@ -4,25 +4,17 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="css til header">
+-      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/image/logo.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/image/logo1.png" afterDir="false" />
++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="index forsta">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="CSS File" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Merge.Settings">
+     <option name="BRANCH" value="Emma" />
+@@ -34,24 +26,23 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="28WTirTAb6qaK9AI3WgPRqMRIBz" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <OptionsSetting value="false" id="Update" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+-    <property name="list.type.of.created.stylesheet" value="CSS" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-  </component>
+-  <component name="RecentsManager">
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/image" />
+-    </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -62,14 +53,6 @@
+       <option name="presentableId" value="Default" />
+       <updated>1651331471949</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="css til header">
+-      <created>1651579826498</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1651579826498</updated>
+-    </task>
+-    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -83,8 +66,4 @@
+       </map>
+     </option>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="css til header" />
+-    <option name="LAST_COMMIT_MESSAGE" value="css til header" />
+-  </component>
+ </project>
+\ No newline at end of file
