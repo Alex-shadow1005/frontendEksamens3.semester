@@ -1,0 +1,13 @@
+#wrapper{
+    background-color: #DADADA;
+}
+
+img{
+    width:100%;
+}
+
+.kontakt-GMaps{
+    width: 100% !important;
+    height: 450px;
+    border: 2px solid #facd8a;
+}

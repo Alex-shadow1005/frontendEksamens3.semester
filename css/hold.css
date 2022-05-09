@@ -1,0 +1,17 @@
+#wrapper{
+    background-color: #DADADA;
+}
+
+.holdimage{
+    width: 540px;
+    height: 300px;
+    border: 2px solid #facd8a;
+}
+
+.holdbutton{
+    border-radius: 10px;
+    border: 2px solid #facd8a;
+    width: 25%;
+    height: 30px;
+}
+
