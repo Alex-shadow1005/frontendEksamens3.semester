@@ -17,9 +17,11 @@ header{
     outline-style: solid;
 
 
+
 }
 
 header.navigationbar{
+    padding-bottom: 20px;
     display: inline;
     float: left;
     outline: gold;
@@ -28,8 +30,8 @@ header.navigationbar{
 }
 span{
     text-decoration: none;
-    padding: 50px;
-    padding-top: 40px;
+    padding: 35px;
+    padding-top: 20px;
     color: white;
 
 
@@ -37,6 +39,8 @@ span{
 a{
     text-decoration: none;
     color: white;
+    padding-top: 60px;
+    padding: 20px;
 
 
 }
