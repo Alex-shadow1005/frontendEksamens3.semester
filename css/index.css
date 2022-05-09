@@ -72,10 +72,37 @@ body{
       border: 2px solid #facd8a;
 }
 .række1-billede1 a{
-    color: #303030;
-    font-size: 50px;
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
 }
-
+.række1-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede1 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
 
 
 
