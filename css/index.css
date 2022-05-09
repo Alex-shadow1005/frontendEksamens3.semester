@@ -4,17 +4,20 @@
 
 
 }
+body{
+    background-color: #303030;
+}
 
 .velkomst-section h2{
     font-family: sans-serif;
     color: white;
     background-color: #303030;
     font-size: 5em;
-    display: block;
     text-align: center;
-
-
+    padding-bottom: 100px;
+    padding-top: 500px;
 }
+
 
 .velkomst-section p{
     font-family: sans-serif;
@@ -22,7 +25,7 @@
     background-color: #303030;
     font-size: 2em;
     text-align: center;
-    padding-bottom: 10cm;
+    padding-bottom: 7cm;
 }
 
 
