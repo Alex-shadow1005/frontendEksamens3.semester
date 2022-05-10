@@ -17,22 +17,11 @@ async function loadHold() {
             col.setAttribute("class", "col-6");
             col.setAttribute("style","text-align: right");
             row.appendChild(col);
-            const overskrift = document.createElement("h2");
-            overskrift.innerText = hold.name;
-            col.appendChild(overskrift);
-            const br = document.createElement("br");
-            col.appendChild(br);
+            overskrift(col, hold);
 
-            const underoverskrift = document.createElement("h3");
-            underoverskrift.innerText = hold.underOverskrift;
-            col.appendChild(underoverskrift);
+            underOverskrift(col, hold);
 
-            const br1 = document.createElement("br");
-            col.appendChild(br1);
-
-            const tekst = document.createElement("p");
-            tekst.innerText = hold.tekst;
-            col.appendChild(tekst);
+            ptekst(col, hold);
 
             const col1 = document.createElement("div");
             col1.setAttribute("class", "col-6");
@@ -40,14 +29,7 @@ async function loadHold() {
 
             row.appendChild(col1);
 
-            const img = document.createElement("img");
-            img.setAttribute("class","holdimage");
-            img.setAttribute("src", "image/Hundetraening2_content.png");
-            img.setAttribute("alt", "image");
-
-            col1.appendChild(img);
-            const br2 = document.createElement("br");
-            col1.appendChild(br2);
+            createImg(col1);
 
         } else {
             console.log((i+2)%2==1);
@@ -56,42 +38,53 @@ async function loadHold() {
             row.appendChild(col);
 
 
-            const img = document.createElement("img");
-            img.setAttribute("class","holdimage");
-            img.setAttribute("src", "image/Hundetraening2_content.png");
-            img.setAttribute("alt", "image");
-
-            col.appendChild(img);
-
-            const br2 = document.createElement("br");
-            col.appendChild(br2)
+            createImg(col);
 
             const col1 = document.createElement("div");
             col1.setAttribute("class", "col-6");
 
             row.appendChild(col1);
+            overskrift(col1, hold);
 
-            const overskrift = document.createElement("h2");
-            overskrift.innerText = hold.name;
-            col1.appendChild(overskrift);
+            underOverskrift(col1, hold);
 
-            const br = document.createElement("br");
-            col1.appendChild(br);
-
-            const underoverskrift = document.createElement("h3");
-            underoverskrift.innerText = hold.underOverskrift;
-            col1.appendChild(underoverskrift);
-            const br1 = document.createElement("br");
-            col1.appendChild(br1);
-
-
-            const tekst = document.createElement("p");
-            tekst.innerText = hold.tekst;
-            col1.appendChild(tekst);
+            ptekst(col1, hold);
         }
 
     }
 
+}
+function overskrift(col, hold){
+    const overskrift = document.createElement("h2");
+    overskrift.innerText = hold.name;
+    col.appendChild(overskrift);
+    const br = document.createElement("br");
+    col.appendChild(br);
+}
+function underOverskrift(col, hold){
+    const underoverskrift = document.createElement("h3");
+    underoverskrift.innerText = hold.underOverskrift;
+    col.appendChild(underoverskrift);
+    const br1 = document.createElement("br");
+    col.appendChild(br1);
+}
+
+function ptekst(col, hold){
+    const tekst = document.createElement("p");
+    tekst.innerText = hold.tekst;
+    col.appendChild(tekst);
+}
+
+function createImg(col){
+    const img = document.createElement("img");
+    img.setAttribute("class","holdimage");
+    img.setAttribute("src", "image/Hundetraening2_content.png");
+    img.setAttribute("alt", "image");
+
+    col.appendChild(img);
+
+    const br2 = document.createElement("br");
+    col.appendChild(br2)
 }
 document.addEventListener('DOMContentLoaded', () => {
 
