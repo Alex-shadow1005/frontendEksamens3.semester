@@ -33,51 +33,15 @@ a {
 
 footer {
     background-color: #3D4C31;
-    padding: 100px;
-    padding-bottom: 150px;
-    text-align: center;
-    font-size: 26px;
-
-}
-.contact-right{
-    float: right;
-
-}
-.contact-left{
-    float: left;
-
-}
-.contact p{
-    padding-bottom: 30px;
-}
-.footerbutton{
-    padding: 10px;
-    border-radius: 8px;
-    background-color: white;
-
-}
-input{
-    border-radius: 8px;
-    width: 50%;
-    padding: 10px;
-
-}
-.SoMe{
-    padding-bottom: 20px;
-
-}
-.contact a {
-    width: 50%;
-}
-
-i.fa-instagram{
-    font-size: 50px;
     color: white;
- 
 }
-i.fa-facebook{
-    font-size: 50px;
+
+footer .container .row{
+    opacity: 0.9;
 }
+
+
+
 
 
 
