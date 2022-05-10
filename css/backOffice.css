@@ -42,3 +42,9 @@ ul {
     display: none;
 }
 
+span {
+    position: absolute;
+    left: -9999px;
+    display: inline-block;
+    min-width: 6em;
+}
