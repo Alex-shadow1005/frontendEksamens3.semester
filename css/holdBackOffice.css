@@ -1,0 +1,44 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+
+
+/*Core css*/
+body {
+    margin: 0;
+    font-family: Calibri;
+    background-color: var(--background);
+}
+
+/*Global design stylings*/
+#movies {
+    height: 100%;
+    margin: auto;
+}
+
+.wrapper {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+/*Nav bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--nav_color);
+}
+
+
+#overlay {
+    display: none;
+}
+
