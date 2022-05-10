@@ -1,5 +1,5 @@
 *{
-    font-family: sans-serif;
+    font-family: SansSerif;
     margin: 0;
     padding: 0;
 }
@@ -13,53 +13,60 @@ header{
     float: left;
     padding-top:0px;
     padding-bottom: 30px;
-    list-style-type: none;
-    overflow: hidden;
+    outline: #FACD8A;
+    outline-style: solid;
+
+
 
 }
 
 header.navigationbar{
+    padding-bottom: 20px;
     display: inline;
     float: left;
-    list-style-type: none;
-    overflow: hidden;
-
-
+    outline: gold;
+    outline-style: solid;
 
 }
 span{
     text-decoration: none;
-    padding: 40px;
-    padding-top: 30px;
+    padding: 35px;
+    padding-top: 20px;
     color: white;
+
 
 }
 a{
     text-decoration: none;
     color: white;
+    padding-top: 60px;
+    padding: 20px;
+
 
 }
 header.logo{
-  width: 100%;
-  border: 60px;
-    border-color: gold;
+    width: 100%;
+
 }
 
 footer {
     background-color: #3D4C31;
     padding: 100px;
+    padding-bottom: 150px;
     text-align: center;
     font-size: 26px;
+
 }
 .contact-right{
     float: right;
-
 
 }
 .contact-left{
     float: left;
 
-
+}
+.contact p{
+    padding-bottom: 30px;
 }
 .footerbutton{
     padding: 10px;
@@ -68,10 +75,28 @@ footer {
 
 }
 input{
-    padding: 10px;
-    margin-top: 20px;
     border-radius: 8px;
+    width: 50%;
+    padding: 10px;
 
 }
+.SoMe{
+    padding-bottom: 20px;
+
+}
+.contact a {
+    width: 50%;
+}
+
+i.fa-instagram{
+    font-size: 50px;
+    color: white;
+ 
+}
+i.fa-facebook{
+    font-size: 50px;
+}
+
+
 
 

@@ -1,8 +1,11 @@
 *{
 
-    font-family: Laksaman;
+    font-family: Astonice Semibold;
 
 
+}
+body{
+    background-color: #303030;
 }
 
 .velkomst-section h2{
@@ -10,11 +13,11 @@
     color: white;
     background-color: #303030;
     font-size: 5em;
-    display: block;
     text-align: center;
-
-
+    padding-bottom: 100px;
+    padding-top: 500px;
 }
+
 
 .velkomst-section p{
     font-family: sans-serif;
@@ -22,7 +25,7 @@
     background-color: #303030;
     font-size: 2em;
     text-align: center;
-    padding-bottom: 10cm;
+    padding-bottom: 7cm;
 }
 
 
@@ -58,7 +61,8 @@
      border: 2px solid #facd8a;
 
 
-}.række2-billede2{
+}
+.række2-billede2{
     background-image: url("../image/logo4.png");
     float: right;
       text-align: center;
@@ -66,20 +70,41 @@
       width: 100%;
       height: 500px;
       border: 2px solid #facd8a;
-
-
-
+}
+.række1-billede1 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række1-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede1 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
 }
 
- .row a{
 
-     vertical-align: middle;
-     font-size: 100px;
-     color: #DADADA;
-     text-decoration: none;
-
-
- }
 
 
 
