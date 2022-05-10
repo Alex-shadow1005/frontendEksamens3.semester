@@ -116,7 +116,7 @@ async function postFormDataAsJson(url, formData) {
     if (holdForm) {
         const holdId  = document.getElementById("hold").value;
 
-        console.log(holdId);
+
         const hold = {};
         hold.id = holdId;
         hold.name = "";

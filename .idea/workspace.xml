@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/InsertImg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/galleri.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/holdBackOffice.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hentHold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hentgalleri.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/holdBackoffice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/holdtest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05-05-2022_10_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05-05-2022_10_16__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/galleri.html" beforeDir="false" afterPath="$PROJECT_DIR$/galleri.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hundetræning.html" beforeDir="false" afterPath="$PROJECT_DIR$/hundetræning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/kalender.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Emma" />
+        <entry key="$PROJECT_DIR$" value="Younes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +51,45 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/image" />
     </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.holdtest.html">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertImg.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/InsertImg.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="holdBackoffice.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdBackoffice.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="hold.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/hold.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="holdtest.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdtest.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="insertVid.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/insertVid.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.holdtest.html" />
+        <item itemvalue="JavaScript Debug.holdBackoffice.html" />
+        <item itemvalue="JavaScript Debug.insertVid.html" />
+        <item itemvalue="JavaScript Debug.InsertImg.html" />
+        <item itemvalue="JavaScript Debug.hold.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

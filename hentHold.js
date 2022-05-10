@@ -1,7 +1,7 @@
 const divContainer = document.getElementById("con");
 
 async function loadHold() {
-    const holdList = await fetch("http://localhost:8181/api/hold").then(response => response.json());
+    const holdList = await fetch("http://localhost:8080/api/hold").then(response => response.json());
     const holdListLength = holdList.length;
 
     for (let i = 0; i < holdListLength; i++){
