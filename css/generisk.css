@@ -34,15 +34,57 @@ a {
 footer {
     background-color: #3D4C31;
     color: white;
+    padding-top: 10px;
 }
 
 footer .container .row{
     opacity: 0.9;
 }
 
+/* SOCIAL MEDIAS */
 
+.social-menu {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0 !important;
+}
 
+.social-menu i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
 
+.social-menu i:before {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
 
+.social-menu a {
+    text-decoration: none;
+}
 
+.fa-facebook {
+    background:#3b5998;
+}
 
+.fa-instagram {
+    background:#8a3ab9;
+}
+
+.social-menu i:hover {
+    opacity: 0.8;
+}
+
+/* NEWSLETTER */
+
+.footerbutton{
+    border-radius: 10%;
+}

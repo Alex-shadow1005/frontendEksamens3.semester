@@ -2,31 +2,28 @@
 <html lang="en">
 <head>
     <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/bced513090.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a797577768.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Footer</title>
     <link rel="stylesheet" href="css/generisk.css">
     <link rel="stylesheet" href="css/bootstrap.css"></head>
-<footer class="text-center text-lg-start">
-    <div class="container p-4">
+<footer>
+    <div class="container">
         <div class="row">
-            <div class="col-6 col-xxl-6 col-sm-12 mb-4 mb-md-0">
+            <div class="col-6 col-xxl-6 col-xl-6 col-sm-12">
                 <h5>Her kan du følge os på vores sociale medier!</h5>
-                <a
-                    class="btn btn-primary btn-floating m-1"
-                    style="background-color: #3b5998;"
-                    href="#!"
-                    role="button"
-                    ><i class="fab fa-facebook fa-2x"></i
-                    >
-                </a>
-                <a
-                    class="btn btn-primary btn-lg btn-floating"
-                    style="background-color: #ac2bac;"
-                    href="#!"
-                    role="button"
-                    ><i class="fab fa-instagram-round"></i
-                ></a>
+                <ul class="social-menu">
+                   <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                   <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-xxl-6 col-xl-6 col-sm-12">
+                <h5>Få fede særtilbud ved at tilmelde dig vores tilbudsbrev her!</h5>
+                <form action="http://localhost:63342/hold.html" method="post">
+                    <input type="email" id="email" name="email" class="form-control">
+                    <label class="form-label" for="email">Email Address</label>
+                    <button type="submit" value="email">Tilmeld</button>
+                </form>
             </div>
         </div>
     </div>
