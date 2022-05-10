@@ -1,53 +1,35 @@
+/* ALL PAGES, ONLY USE GENERIC STUFF LIKE PAGE WIDTH OR FONT FAMILY */
+
 *{
-    font-family: SansSerif;
-    margin: 0;
-    padding: 0;
+    font-family: sans-serif;
 }
 
-header{
-    background-color:#433310;
-    color: white;
-    text-align: center;
-    font-size: 26px;
-    display: inline;
-    float: left;
-    padding-top:0px;
-    padding-bottom: 30px;
-    outline: #FACD8A;
-    outline-style: solid;
+/* HEADER.HTML */
 
-
-
+/* NAVBAR */
+nav{
+    border-bottom: 2px solid #facd8a;
+    border-top: 2px solid #facd8a;
 }
 
-header.navigationbar{
-    padding-bottom: 20px;
-    display: inline;
-    float: left;
-    outline: gold;
-    outline-style: solid;
-
+.navbar-brown .navbar-nav .nav-link{
+    color: #fff !important;
+    font-size: 25px;
+    opacity: 0.8;
 }
-span{
-    text-decoration: none;
-    padding: 35px;
-    padding-top: 20px;
-    color: white;
 
-
+.bg-brown {
+    background-color: #433310 !important;
 }
-a{
+
+/* OTHER GENERIC STUFF? */
+
+a {
     text-decoration: none;
     color: white;
-    padding-top: 60px;
-    padding: 20px;
-
-
 }
-header.logo{
-    width: 100%;
 
-}
+/* FOOTER.HTML */
 
 footer {
     background-color: #3D4C31;
