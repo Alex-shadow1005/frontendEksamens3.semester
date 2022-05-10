@@ -1,0 +1,269 @@
+Index: js/kalender.js
+===================================================================
+diff --git a/js/kalender.js b/js/kalender.js
+deleted file mode 100644
+--- a/js/kalender.js	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
++++ /dev/null	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
+@@ -1,127 +0,0 @@
+-//funktion(er) der kalder på to datoer og henter dem, skal nok ikke bruges
+-let calendarShow =1;
+-function settingDate(date, day) {
+-    date = new Date(date);
+-    date.setDate(day);
+-    date.setHours(23);
+-    return date;
+-}
+-
+-function getDatesBetween(date1, date2) {
+-    let range1 = new Date(date1);
+-    let range2 = new Date(date2);
+-    date1 = settingDate(date1, 31);
+-    date2 = settingDate(date2, 31);
+-    let temp;
+-    let dates = [];
+-    while (date1 <= date2) {
+-        if (date1.getDate() != 31) {
+-            temp = settingDate(date1, 0);
+-            if (temp >= range1 && temp <= range2) dates.push(temp); //smider datoen temp ind i dates array
+-            date1 = settingDate(date1, 31);
+-        } else {
+-            temp = new Date(date1);
+-            if (temp >= range1 && temp <= range2) dates.push(temp);
+-            date1.setMonth(date1.getMonth() + 1);
+-        }
+-    }
+-    console.table(dates);
+-    let content = "<div class='calendarBtns'><button id='calendarPrevBtn' onclick='callprev()' disabled>Prev</button> | <button id='calendarNextBtn' onclick='callnext()'>Next</button></div>";
+-    let weekDays = [
+-        {shortDay: "Mon", fullDay: "Monday"},
+-        {shortDay: "Tue", fullDay: "Tuesday"},
+-        {shortDay: "Wed", fullDay: "Wednesday"},
+-        {shortDay: "Thu", fullDay: "Thursday"},
+-        {shortDay: "Fri", fullDay: "Friday"},
+-        {shortDay: "Sat", fullDay: "Saturday"},
+-        {shortDay: "Sun", fullDay: "Sunday"}
+-    ];
+-    let LastDate, firstDate;
+-    for (let i = 0; i < dates.length; i++) {
+-        LastDate = dates[i];
+-        firstDate = new Date(dates[i].getFullYear(), dates[i].getMonth(), 1);
+-        content += "<div id = 'calendarTable_" + (i + 1) + "' class='calendarDiv'>";
+-        content +=
+-            "<h2>" +
+-            firstDate.toString().split(" ")[1] + //fra objekt til string, og splitter ved mellemrum
+-            "-" +
+-            firstDate.getFullYear() +
+-            "</h2>";
+-        content += "<table class='calendarTable'>"
+-        content += "<thead>"
+-        weekDays.map(item => {
+-            content += "<th>" + item.fullDay + "</th>";
+-        })
+-        content += "</thead>"
+-        content += "<tbody>"
+-        let j = 1;
+-        let displayNum, idMonth;
+-        while (j <= LastDate.getDate()) {
+-            content += "<tr>"
+-            for (let k = 0; k < 7; k++) {
+-                displayNum = j < 10 ? "0" + j : j;
+-                if (j == 1) {
+-                    if (firstDate.toString().split(" ")[0] == weekDays[k].shortDay) { //sammenligner index 0 (Fri, Sat..) med datoens dag på ugen (om den 1. er på samme dag som index 0
+-                        content += "<td onclick='openModal()'>" + displayNum + "</td>"
+-                        j++;
+-                    } else {
+-                        content += "<td></td>";
+-                    }
+-                } else if (j > LastDate.getDate()) {
+-                    content += "<td></td>";
+-                } else {
+-                    content += "<td>" + displayNum + "</td>";
+-                    j++;
+-                }
+-            }
+-            content += "</tr>"
+-        }
+-        content += "</tbody>"
+-        content += "</table>"
+-        content += "</div>";
+-    }
+-    return content;
+-}
+-
+-//når der bliver trykket på next knappen
+-function callnext() {
+-    let alltables = document.getElementsByClassName('calendarDiv');
+-    document.getElementById('calendarPrevBtn').disabled = false;
+-    calendarShow++;
+-    if (calendarShow <= alltables.length) {
+-        for (let i = 0; i < alltables.length; i++) {
+-            alltables[i].style.display = "none";
+-        }
+-        document.getElementById("calendarTable_" + calendarShow).style.display = "block"; //den vælger calendarTable_2 og så næste gang calendarTable_3 osv, calendarShow er bare et tal
+-        if (calendarShow == alltables.length) {
+-            document.getElementById('calendarNextBtn').disabled = true;
+-        }
+-    }
+-}
+-
+-function callprev() {
+-    let alltables = document.getElementsByClassName('calendarDiv');
+-    document.getElementById('calendarNextBtn').disabled = false;
+-    calendarShow--;
+-    if (calendarShow >= 1) {
+-        for (let i = 0; i < alltables.length; i++) {
+-            alltables[i].style.display = "none";
+-        }
+-        document.getElementById("calendarTable_" + calendarShow).style.display = "block"; //den vælger calendarTable_2 og så næste gang calendarTable_3 osv, calendarShow er bare et tal
+-        if (calendarShow == 1) {
+-            document.getElementById('calendarPrevBtn').disabled = true;
+-        }
+-    }
+-}
+-
+-function openModal() {
+-    let content = "<div class='bg-modal'>";
+-    content += "<div class='modal-content'>";
+-}
+-
+-function addNoteOnADate() {
+-
+-}
+-
+-let content = getDatesBetween("2022/01/01", "2023/01/01");
+-document.getElementById("calendar").innerHTML = content;
+\ No newline at end of file
+Index: html/kalender.html
+===================================================================
+diff --git a/html/kalender.html b/html/kalender.html
+deleted file mode 100644
+--- a/html/kalender.html	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
++++ /dev/null	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
+@@ -1,14 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <title>Kalender</title>
+-    <script src="../js/kalender.js" defer></script>
+-    <link rel="stylesheet" href="../css/kalender.css">
+-
+-
+-</head>
+-<body>
+-<div id="calendar"></div>
+-</body>
+-</html>
+\ No newline at end of file
+Index: css/kalender.css
+===================================================================
+diff --git a/css/kalender.css b/css/kalender.css
+deleted file mode 100644
+--- a/css/kalender.css	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
++++ /dev/null	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
+@@ -1,71 +0,0 @@
+-.calendar {
+-    width: 80%;
+-    margin-left: 10%;
+-    margin-top: 60%;
+-}
+-
+-.calendarTable {
+-    width: 100%;
+-    border: 1px solid black;
+-}
+-
+-.calendarTable thead tr th {
+-    background: black;
+-    border-bottom: 1px solid black;
+-    padding: 20px 0px;
+-    color: white;
+-}
+-
+-.calendarTable tr td {
+-    text-align: center;
+-    padding: 20px 0;
+-    border: 1px solid #ccc;
+-    cursor: pointer;
+-    background: #dadada;
+-}
+-
+-/*
+-prev og next knapperne
+-*/
+-
+-.calendarBtns {
+-    padding: 10px 0;
+-    width: 100%;
+-}
+-
+-.calendarBtns button {
+-    padding: 6px 12px;
+-    font-size: 18px;
+-    border-radius: 6px;
+-    cursor: pointer;
+-}
+-
+-.calendarDiv {
+-    display: none;
+-}
+-
+-#calendarTable_1 {
+-    display: block;
+-}
+-
+-/*
+-modal
+- */
+-
+-.bg-modal {
+-    width: 100%;
+-    height: 100%;
+-    background-color: rgba(0, 0, 0, 0.7);
+-    position: absolute;
+-    top: 0;
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-}
+-
+-.modal-content {
+-    width: 500px;
+-    height: 300px;
+-    background-color: white;
+-    border-radius: 4px;
+-}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"footer og header\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/footer.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/footer.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/Development\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/image\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\r\n      <created>1651331471949</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1651331471949</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\r\n      <created>1651579826498</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651579826498</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"arbejder på generisk header\">\r\n      <created>1651652127850</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651652127850</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"arbejder på generisk header\">\r\n      <created>1651652165372</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651652165372</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"rettet button\">\r\n      <created>1651826356397</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651826356397</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"css til header\" />\r\n    <MESSAGE value=\"arbejder på generisk header\" />\r\n    <MESSAGE value=\"rettet button\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"rettet button\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fa49fddf451dff5898da53049e566efc69f9a2f1)
++++ b/.idea/workspace.xml	(date 1652169484001)
+@@ -4,10 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="footer og header">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="arbejder på generisk header">
++      <change beforePath="$PROJECT_DIR$/css/kalender.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/kalender.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/js/kalender.js" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -100,6 +100,7 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="css til header" />
