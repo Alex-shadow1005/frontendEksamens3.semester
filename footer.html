@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <title>Footer</title>
     <link rel="stylesheet" href="css/generisk.css">
-    <link rel="stylesheet" href="css/bootstrap.css"></head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB5-Pro-Advanced_4.0.0/css/mdb.min.css">
+</head>
 <footer>
     <div class="container">
         <div class="row">
@@ -19,11 +21,15 @@
             </div>
             <div class="col-6 col-xxl-6 col-xl-6 col-sm-12">
                 <h5>Få fede særtilbud ved at tilmelde dig vores tilbudsbrev her!</h5>
-                <form action="http://localhost:63342/hold.html" method="post">
-                    <input type="email" id="email" name="email" class="form-control">
-                    <label class="form-label" for="email">Email Address</label>
-                    <button type="submit" value="email">Tilmeld</button>
-                </form>
+                <div class="row">
+                    <div class="col-8 form-outline">
+                        <input type="email" id="email" name="email" class="form-control">
+                        <label class="form-label ps-3" for="email">Email Address</label>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary footerbutton">Tilmeld</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

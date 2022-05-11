@@ -32,9 +32,10 @@ a {
 /* FOOTER.HTML */
 
 footer {
-    background-color: #3D4C31;
+    background-color: #3D4C31 !important;
     color: white;
-    padding-top: 10px;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 footer .container .row{
@@ -86,5 +87,19 @@ footer .container .row{
 /* NEWSLETTER */
 
 .footerbutton{
-    border-radius: 10%;
+    padding: .65rem 1.5rem .65rem !important;
+}
+
+.form-outline .form-control{
+    background: white !important;
+    border: 2px solid grey !important;
+}
+
+.form-outline .form-control:focus{
+    border: 2px solid #facd8a !important;
+}
+
+.form-outline .form-control:focus ~ .form-label{
+    color: black !important;
+    font-weight: bold;
 }
