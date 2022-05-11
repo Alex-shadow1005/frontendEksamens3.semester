@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="merged hentHold.js and holdBackoffice.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleri.html" beforeDir="false" afterPath="$PROJECT_DIR$/galleri.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hentHold.js" beforeDir="false" afterPath="$PROJECT_DIR$/hentHold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hentgalleri.js" beforeDir="false" afterPath="$PROJECT_DIR$/hentgalleri.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +71,10 @@
     <configuration name="InsertImg.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/InsertImg.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="holdBackoffice.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdBackoffice.html" useBuiltInWebServerPort="true">
+    <configuration name="galleri.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/galleri.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="hold.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/hold.html" useBuiltInWebServerPort="true">
+    <configuration name="holdBackoffice.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdBackoffice.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="holdtest.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdtest.html" useBuiltInWebServerPort="true">
@@ -84,10 +86,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.holdtest.html" />
+        <item itemvalue="JavaScript Debug.galleri.html" />
         <item itemvalue="JavaScript Debug.holdBackoffice.html" />
         <item itemvalue="JavaScript Debug.insertVid.html" />
         <item itemvalue="JavaScript Debug.InsertImg.html" />
-        <item itemvalue="JavaScript Debug.hold.html" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651652165372</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="merged hentHold.js and holdBackoffice.js">
+      <created>1652181553101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652181553102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="css til header" />
     <MESSAGE value="arbejder på generisk header" />
-    <option name="LAST_COMMIT_MESSAGE" value="arbejder på generisk header" />
+    <MESSAGE value="merged hentHold.js and holdBackoffice.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged hentHold.js and holdBackoffice.js" />
   </component>
 </project>
