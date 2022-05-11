@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="ændreing af forside i forhold til padding og vilkomst text">
-      <change afterPath="$PROJECT_DIR$/css/omos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/omOs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tipsogtricks.html" beforeDir="false" afterPath="$PROJECT_DIR$/tipsogtricks.html" afterDir="false" />
-=======
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/omOsBackoffice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/omOsBackoffice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
->>>>>>> Mads
-=======
-      <change beforePath="$PROJECT_DIR$/css/holdBackOffice.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/backOffice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/holdBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.html" afterDir="false" />
->>>>>>> Younes
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment=" header">
+      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +16,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Younes" />
+        <entry key="$PROJECT_DIR$" value="Emma" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,66 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS"
-  }
-}]]></component>
-=======
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
->>>>>>> Mads
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/image" />
     </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.holdtest.html">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertImg.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/InsertImg.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="holdBackoffice.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdBackoffice.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="hold.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/hold.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="holdtest.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/holdtest.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="insertVid.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontendEksamens3.semester/insertVid.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.holdtest.html" />
-        <item itemvalue="JavaScript Debug.holdBackoffice.html" />
-        <item itemvalue="JavaScript Debug.insertVid.html" />
-        <item itemvalue="JavaScript Debug.InsertImg.html" />
-        <item itemvalue="JavaScript Debug.hold.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -127,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651331471949</updated>
-      <workItem from="1652174595773" duration="1552000" />
+      <workItem from="1651849312436" duration="3353000" />
     </task>
     <task id="LOCAL-00001" summary="css til header">
       <created>1651579826498</created>
@@ -150,7 +84,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651652165372</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rettet button">
+      <created>1651826356397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651826356397</updated>
+    </task>
+    <task id="LOCAL-00005" summary="færdig generiks header og footer">
+      <created>1651840376414</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651840376414</updated>
+    </task>
+    <task id="LOCAL-00006" summary=" header">
+      <created>1652094185012</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652094185013</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,11 +121,13 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="css til header" />
     <MESSAGE value="arbejder på generisk header" />
-    <option name="LAST_COMMIT_MESSAGE" value="arbejder på generisk header" />
+    <MESSAGE value="rettet button" />
+    <MESSAGE value="færdig generiks header og footer" />
+    <MESSAGE value=" header" />
+    <option name="LAST_COMMIT_MESSAGE" value=" header" />
   </component>
 </project>
