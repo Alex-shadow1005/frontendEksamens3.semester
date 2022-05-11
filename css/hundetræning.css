@@ -3,7 +3,7 @@
 }
 
 .holdimage{
-    width: 540px;
+    width: 100%;
     height: 300px;
     border: 2px solid #facd8a;
 }
@@ -13,5 +13,13 @@
     border: 2px solid #facd8a;
     width: 25%;
     height: 30px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.holdbutton:hover{
+    background: #cacaca;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
 }
 
