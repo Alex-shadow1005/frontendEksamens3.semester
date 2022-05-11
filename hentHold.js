@@ -25,7 +25,7 @@ async function loadHold() {
             breaktag(col);
             breaktag(col);
             breaktag(col);
-            underOverskrift(col, hold);
+            pris(col, hold);
             ptekstitalic(col, hold);
             breaktag(col);
             breaktag(col);
@@ -61,7 +61,7 @@ async function loadHold() {
             breaktag(col1);
             breaktag(col1);
             breaktag(col1);
-            underOverskrift(col1, hold);
+            pris(col1, hold);
             ptekstitalic(col1, hold);
             breaktag(col1);
             breaktag(col1);
