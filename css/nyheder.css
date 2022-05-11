@@ -1,0 +1,105 @@
+
+*{
+ font-family: SansSerif;
+
+
+
+}
+button{
+padding: 5px;
+}
+
+#more {
+ display: none;
+}
+
+#moreSec {
+ display: none;
+}
+#moreThird {
+ display: none;
+}
+#moreFour {
+ display: none;
+}
+
+body{
+ background-color: #303030;
+ color: white;
+
+}
+
+h3{
+padding-top: 30px;
+
+}
+.introduktionNyhed{
+ text-align: center;
+ font-size: 28px;
+ padding-bottom: 60px;
+
+
+}
+.førsteArtikel{
+ text-align: center;
+ font-size: 20px;
+ padding-top: 80px;
+ border: 3px solid #facd8a;
+ width: 80%;
+ height: 90%;
+ box-sizing: border-box;
+ padding: 30px;
+ padding-bottom: 40px;
+ margin: auto;
+
+
+
+}
+.andenArtikel{
+ text-align: center;
+ display: block;
+ padding: 30px;
+ padding-bottom: 40px;
+ font-size: 20px;
+ padding-top: 40px;
+ width: 80%;
+ height: 80%;
+ border: 3px solid #facd8a;
+ box-sizing: border-box;
+ margin: auto;
+
+
+}
+.tredjeArtikel{
+ text-align: center;
+ display: block;
+ padding: 30px;
+ font-size: 20px;
+ padding-top: 40px;
+ padding-bottom: 40px;
+ border: 3px solid #facd8a;
+ box-sizing: border-box;
+ width: 80%;
+ height: 80%;
+ margin: auto;
+
+
+
+
+}
+.fjerdeArtikel{
+ display: block;
+ text-align: center;
+ padding: 30px;
+ padding-bottom: 40px;
+ font-size: 20px;
+ padding-top: 40px;
+ border: 3px solid #facd8a;
+ box-sizing: border-box;
+ width: 80%;
+ height: 80%;
+ margin: auto;
+}
+p{
+ padding: 25px;
+}
