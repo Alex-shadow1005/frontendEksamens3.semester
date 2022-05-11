@@ -1,8 +1,6 @@
 *{
 
-    font-family: Laksaman;
-
-
+    font-family:sans-serif;
 }
 body{
     background-color: #303030;
@@ -61,7 +59,8 @@ body{
      border: 2px solid #facd8a;
 
 
-}.række2-billede2{
+}
+.række2-billede2{
     background-image: url("../image/logo4.png");
     float: right;
       text-align: center;
@@ -69,20 +68,41 @@ body{
       width: 100%;
       height: 500px;
       border: 2px solid #facd8a;
-
-
-
+}
+.række1-billede1 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række1-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede1 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+}
+.række2-billede2 a{
+    color: white;
+    font-size: 75px;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
 }
 
- .row a{
 
-     vertical-align: middle;
-     font-size: 100px;
-     color: #DADADA;
-     text-decoration: none;
-
-
- }
 
 
 
