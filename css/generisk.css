@@ -90,12 +90,15 @@ footer .container .row{
     padding: .65rem 1.5rem .65rem !important;
 }
 
+.form-outline label{
+    opacity: 1 !important;
+}
+
 .form-outline .form-control{
     background: #DADADA !important;
     width: 100% !important;
 }
 
 .form-outline .form-control:focus ~ .form-label{
-    font-weight: bold;
-    border: 0 !important;
+    font-weight: normal;
 }

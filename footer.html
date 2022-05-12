@@ -7,8 +7,22 @@
     <title>Footer</title>
     <link rel="stylesheet" href="css/generisk.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB5-Pro-Advanced_4.0.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
 </head>
+<script>
+    function check(){
+        var input = document.getElementById("email");
+        var notchMiddle = document.getElementsByClassName("form-notch-middle");
+        if(input.value.length !== 0){
+            input.classList.add("active");
+            notchMiddle.style.borderTopStyle = "transparent";
+            console.log(input.value.length);
+        } else if(input.value.length === 0){
+            input.classList.remove("active");
+            console.log(input.value.length);
+        }
+    }
+</script>
 <footer>
     <div class="container">
         <div class="row">
@@ -24,7 +38,7 @@
                 <div class="row">
                     <div class="col-md-8 col-12">
                         <div class="form-outline">
-                            <input type="email" id="email" name="email" class="form-control">
+                            <input type="email" id="email" name="email" class="form-control" onkeyup="check()">
                             <label class="form-label" for="email" style="margin-left: 0px;">Email Address</label>
                             <div class="form-notch">
                                 <div class="form-notch-leading" style="width: 9px;"></div>
