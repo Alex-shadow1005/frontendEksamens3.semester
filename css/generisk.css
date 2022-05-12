@@ -91,18 +91,11 @@ footer .container .row{
 }
 
 .form-outline .form-control{
-    background: white !important;
+    background: #DADADA !important;
     width: 100% !important;
 }
 
 .form-outline .form-control:focus ~ .form-label{
-    color: blue !important;
     font-weight: bold;
     border: 0 !important;
-}
-
-.form-outline .form-control ~ .form-notch{
-    left: unset !important;
-    width: inherit !important;
-    height: 100% !important;
 }
