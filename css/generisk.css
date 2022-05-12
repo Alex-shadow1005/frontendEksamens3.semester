@@ -91,20 +91,15 @@ footer .container .row{
     padding: .65rem 1.5rem .65rem !important;
 }
 
-.form-control{
-    border: 1px solid #bdbdbd !important;
+.form-outline label{
+    opacity: 1 !important;
 }
 
 .form-outline .form-control{
-    background: white !important;
-}
-
-.form-outline .form-control:focus{
-    border: 1px solid #facd8a !important;
+    background: #DADADA !important;
+    width: 100% !important;
 }
 
 .form-outline .form-control:focus ~ .form-label{
-    color: black !important;
-    font-weight: bold;
-    border: 0 !important;
+    font-weight: normal;
 }
