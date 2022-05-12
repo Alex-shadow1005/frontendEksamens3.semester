@@ -1,10 +1,11 @@
 /* ALL PAGES, ONLY USE GENERIC STUFF LIKE PAGE WIDTH OR FONT FAMILY */
 
-*{
-    font-family: 'Quintessential', cursive;
-}
 
 /* HEADER.HTML */
+
+header{
+    font-family: sans-serif;
+}
 
 /* NAVBAR */
 nav{

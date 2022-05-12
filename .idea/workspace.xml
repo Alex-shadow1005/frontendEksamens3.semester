@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="font fra google">
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="Jeg har lavet nyhedsside med html, css og lidt js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/nyheder.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/nyheder.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyheder.html" beforeDir="false" afterPath="$PROJECT_DIR$/nyheder.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,21 +108,7 @@
       <option name="project" value="LOCAL" />
       <updated>1652094185013</updated>
     </task>
-    <task id="LOCAL-00007" summary="fixet nyheder">
-      <created>1652346922280</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1652346922281</updated>
-    </task>
-    <task id="LOCAL-00008" summary="font fra google">
-      <created>1652348902894</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1652348902896</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,8 +131,6 @@
     <MESSAGE value="rettet button" />
     <MESSAGE value="færdig generiks header og footer" />
     <MESSAGE value=" header" />
-    <MESSAGE value="fixet nyheder" />
-    <MESSAGE value="font fra google" />
-    <option name="LAST_COMMIT_MESSAGE" value="font fra google" />
+    <option name="LAST_COMMIT_MESSAGE" value=" header" />
   </component>
 </project>
