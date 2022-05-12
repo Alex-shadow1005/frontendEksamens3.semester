@@ -11,3 +11,6 @@ img{
     height: 450px;
     border: 2px solid #facd8a;
 }
+.container p{
+    font-size: 20px;
+}

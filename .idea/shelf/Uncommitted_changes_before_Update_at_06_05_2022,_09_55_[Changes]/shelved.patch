@@ -1,0 +1,1210 @@
+Index: .idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+new file mode 100644
+--- /dev/null	(date 1651739200031)
++++ b/.idea/runConfigurations.xml	(date 1651739200031)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"arbejder på generisk header\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/footer.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/footer.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/header.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"Emma\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/image\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\n      <created>1651579826498</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651579826498</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"arbejder på generisk header\">\n      <created>1651652127850</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652127850</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"arbejder på generisk header\">\n      <created>1651652165372</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652165372</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"css til header\" />\n    <MESSAGE value=\"arbejder på generisk header\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"arbejder på generisk header\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 57e11fc83322c56c1b92cb9940b9a90471bff718)
++++ b/.idea/workspace.xml	(date 1651742083697)
+@@ -5,11 +5,19 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="arbejder på generisk header">
++      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/Hundetraening2_content.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/generic_image.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/css/hold.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/image/Hundetraening2_content.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/image/generic_image.jpg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/hold.html" beforeDir="false" afterPath="$PROJECT_DIR$/hold.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -82,7 +90,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1651652165372</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="arbejder på generisk header">
++      <created>1651739827259</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1651739827259</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1651739252556)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41__Changes_.xml	(date 1651739252556)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]" date="1651653704160" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 04/05/2022 10:41 [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1651739200033)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch	(date 1651739200033)
+@@ -0,0 +1,376 @@
++Index: css/generisk.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>*{\r\n    font-family: SansSerif;\r\n    margin: 0;\r\n    padding: 0;\r\n\r\n}\r\nheader{\r\n    background-color:#3D4C31;\r\n    text-align: center;\r\n    padding: 50px 0;\r\n    word-spacing: 80px;\r\n    font-size: 30px;\r\n\r\n}\r\n\r\nheader.navigationbar{\r\n    display: inline;\r\n    float: left;\r\n    padding: 14px 16px;\r\n    list-style-type: none;\r\n    overflow: hidden;\r\n    text-decoration: none;\r\n    font-family: Seravek;\r\n}\r\n\r\nheader.logo{\r\n\r\n}\r\n\r\nfooter{\r\n\r\n\r\n}
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/css/generisk.css b/css/generisk.css
++--- a/css/generisk.css	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
+++++ b/css/generisk.css	(date 1651653886070)
++@@ -1,11 +1,11 @@
++ *{
++-    font-family: SansSerif;
+++    font-family: sans-serif;
++     margin: 0;
++     padding: 0;
++ 
++ }
++ header{
++-    background-color:#3D4C31;
+++    background-color:#433310;
++     text-align: center;
++     padding: 50px 0;
++     word-spacing: 80px;
++Index: hold.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n</body>\r\n</html>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/hold.html b/hold.html
++--- a/hold.html	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
+++++ b/hold.html	(date 1651657764221)
++@@ -2,9 +2,92 @@
++ <html lang="en">
++ <head>
++     <meta charset="UTF-8">
++-    <title>Title</title>
+++    <title>Hold</title>
+++    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+++    <script src="headerfooter.js"></script>
+++    <link rel="stylesheet" href="css/hold.css">
+++    <link rel="stylesheet" href="css/generisk.css">
++ </head>
++ <body>
++ 
+++<div id="header"></div>
+++
+++<div id="wrapper">
+++    <br><br>
+++    <center><h1>HOLD</h1></center>
+++    <br><br>
+++
+++    <div class="container">
+++        <div class="row">
+++            <div class="col-6">
+++                <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
+++            </div>
+++            <div class="col-6">
+++                <h2>Hvalpehold</h2>
+++                <br>
+++                <h3 style="font-weight: normal">Alder: 10 uger til 5 mdr.</h3>
+++                <br>
+++                <p style="font-weight: normal">
+++                    Lorem ipsum dolor sit amet, consectetur
+++                    adipiscing elit. Cras et aliquet purus, at
+++                    dignissim enim. Duis a nunc eros.
+++                    Donec vehicula felis quis metus vehicula porttitor.
+++                </p>
+++                <br>
+++                <br>
+++                <h3>Pris: 750 kr. (6x 1 times træning)</h3>
+++                <p style="font-style: italic">(6 kursister pr. hold)</p>
+++
+++            </div>
+++        </div>
+++        <br><br>
+++        <div class="row">
+++            <div class="col-6" style="text-align: right">
+++                <h2>Hverdaslydighed</h2>
+++                <br>
+++                <h3 style="font-weight: normal">Alder: 6 mdr. og op</h3>
+++                <br>
+++                <p style="font-weight: normal">
+++                    Lorem ipsum dolor sit amet, consectetur
+++                    adipiscing elit. Cras et aliquet purus, at
+++                    dignissim enim. Duis a nunc eros.
+++                    Donec vehicula felis quis metus vehicula porttitor.
+++                </p>
+++                <br>
+++                <br>
+++                <h3>Pris: 750 kr. (6x 1 times træning)</h3>
+++                <p style="font-style: italic">(6 kursister pr. hold)</p>
+++
+++            </div>
+++            <div class="col-6" style="text-align:right">
+++                    <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
+++            </div>
+++    </div>
+++        <br><br>
+++        <div class="row">
+++            <div class="col-6">
+++                <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
+++            </div>
+++            <div class="col-6">
+++                <h2>Enetime</h2>
+++                <br>
+++                <h3 style="font-weight: normal">Alder: Alle</h3>
+++                <br>
+++                <p style="font-weight: normal">
+++                    Lorem ipsum dolor sit amet, consectetur
+++                    adipiscing elit. Cras et aliquet purus, at
+++                    dignissim enim. Duis a nunc eros.
+++                    Donec vehicula felis quis metus vehicula porttitor.
+++                </p>
+++                <br>
+++                <br>
+++                <h3>Pris: 600 kr. (1x 1 times træning)</h3>
+++                <h3>1500 kr. (6x 1 times træning (spar 300 kr.))</h3>
+++
+++            </div>
+++        </div>
+++    </div>
+++</div>
+++
++ </body>
++ </html>
++\ No newline at end of file
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"css til header\">\r\n      <change afterPath=\"$PROJECT_DIR$/css/index.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/image/logo.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/image/logo1.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/header.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"Emma\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/image\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\r\n      <created>1651331471949</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1651331471949</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\r\n      <created>1651579826498</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651579826498</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"css til header\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"css til header\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision d4add1e0ea80d5e1165a640f43916df23ae2ffd7)
+++++ b/.idea/workspace.xml	(date 1651657848442)
++@@ -4,25 +4,25 @@
++     <option name="autoReloadType" value="SELECTIVE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="css til header">
++-      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/image/logo.png" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/image/logo1.png" afterDir="false" />
+++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="generisk funktion">
+++      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/css/hold.css" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/image/Hundetraening2_content.png" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/image/generic_image.jpg" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_1.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_22__10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_22__10_38__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__10_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__10_56__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_22__10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_22__10_38__Changes_.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/hold.html" beforeDir="false" afterPath="$PROJECT_DIR$/hold.html" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++     <option name="LAST_RESOLUTION" value="IGNORE" />
++-  </component>
++-  <component name="FileTemplateManagerImpl">
++-    <option name="RECENT_TEMPLATES">
++-      <list>
++-        <option value="CSS File" />
++-      </list>
++-    </option>
++   </component>
++   <component name="Git.Merge.Settings">
++     <option name="BRANCH" value="Emma" />
++@@ -42,16 +42,11 @@
++     <option name="showLibraryContents" value="true" />
++   </component>
++   <component name="PropertiesComponent">
++-    <property name="list.type.of.created.stylesheet" value="CSS" />
+++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodWaste/src/main/resources/static/bootstrap.css" />
++     <property name="node.js.detected.package.eslint" value="true" />
++     <property name="node.js.detected.package.tslint" value="true" />
++     <property name="node.js.selected.package.eslint" value="(autodetect)" />
++     <property name="node.js.selected.package.tslint" value="(autodetect)" />
++-  </component>
++-  <component name="RecentsManager">
++-    <key name="MoveFile.RECENT_KEYS">
++-      <recent name="$PROJECT_DIR$/image" />
++-    </key>
++   </component>
++   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++   <component name="TaskManager">
++@@ -62,14 +57,6 @@
++       <option name="presentableId" value="Default" />
++       <updated>1651331471949</updated>
++     </task>
++-    <task id="LOCAL-00001" summary="css til header">
++-      <created>1651579826498</created>
++-      <option name="number" value="00001" />
++-      <option name="presentableId" value="LOCAL-00001" />
++-      <option name="project" value="LOCAL" />
++-      <updated>1651579826498</updated>
++-    </task>
++-    <option name="localTasksCounter" value="2" />
++     <servers />
++   </component>
++   <component name="Vcs.Log.Tabs.Properties">
++@@ -82,9 +69,6 @@
++         </entry>
++       </map>
++     </option>
++-  </component>
++-  <component name="VcsManagerConfiguration">
++-    <MESSAGE value="css til header" />
++-    <option name="LAST_COMMIT_MESSAGE" value="css til header" />
+++    <option name="oldMeFiltersMigrated" value="true" />
++   </component>
++ </project>
++\ No newline at end of file
++Index: css/hold.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/css/hold.css b/css/hold.css
++new file mode 100644
++--- /dev/null	(date 1651657863852)
+++++ b/css/hold.css	(date 1651657863852)
++@@ -0,0 +1,122 @@
+++#wrapper{
+++    background-color: #DADADA;
+++}
+++
+++.holdimage{
+++    width: 540px;
+++    height: 300px;
+++    border: 2px solid #facd8a;
+++}
+++
+++.container{
+++    width: 100%;
+++    padding-right: var(--bs-gutter-x, 0.75rem);
+++    padding-left: var(--bs-gutter-x, 0.75rem);
+++    margin-right: auto;
+++    margin-left: auto;
+++}
+++
+++@media (min-width: 576px) {
+++    .container {
+++        max-width: 540px;
+++    }
+++}
+++@media (min-width: 768px) {
+++    .container {
+++        max-width: 720px;
+++    }
+++}
+++@media (min-width: 992px) {
+++    .container {
+++        max-width: 960px;
+++    }
+++}
+++@media (min-width: 1200px) {
+++    .container {
+++        max-width: 1140px;
+++    }
+++}
+++@media (min-width: 1400px) {
+++    .container {
+++        max-width: 1320px;
+++    }
+++}
+++
+++.row {
+++    --bs-gutter-x: 1.5rem;
+++    --bs-gutter-y: 0;
+++    display: flex;
+++    flex-wrap: wrap;
+++    margin-top: calc(var(--bs-gutter-y) * -1);
+++    margin-right: calc(var(--bs-gutter-x) * -.5);
+++    margin-left: calc(var(--bs-gutter-x) * -.5);
+++}
+++
+++.col {
+++    flex: 1 0 0%;
+++}
+++
+++.col-auto {
+++    flex: 0 0 auto;
+++    width: auto;
+++}
+++
+++.col-1 {
+++    flex: 0 0 auto;
+++    width: 8.33333333%;
+++}
+++
+++.col-2 {
+++    flex: 0 0 auto;
+++    width: 16.66666667%;
+++}
+++
+++.col-3 {
+++    flex: 0 0 auto;
+++    width: 25%;
+++}
+++
+++.col-4 {
+++    flex: 0 0 auto;
+++    width: 33.33333333%;
+++}
+++
+++.col-5 {
+++    flex: 0 0 auto;
+++    width: 41.66666667%;
+++}
+++
+++.col-6 {
+++    flex: 0 0 auto;
+++    width: 50%;
+++}
+++
+++.col-7 {
+++    flex: 0 0 auto;
+++    width: 58.33333333%;
+++}
+++
+++.col-8 {
+++    flex: 0 0 auto;
+++    width: 66.66666667%;
+++}
+++
+++.col-9 {
+++    flex: 0 0 auto;
+++    width: 75%;
+++}
+++
+++.col-10 {
+++    flex: 0 0 auto;
+++    width: 83.33333333%;
+++}
+++
+++.col-11 {
+++    flex: 0 0 auto;
+++    width: 91.66666667%;
+++}
+++
+++.col-12 {
+++    flex: 0 0 auto;
+++    width: 100%;
+++}
++\ No newline at end of file
++Index: .idea/runConfigurations.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
++new file mode 100644
++--- /dev/null	(date 1651653180602)
+++++ b/.idea/runConfigurations.xml	(date 1651653180602)
++@@ -0,0 +1,10 @@
+++<?xml version="1.0" encoding="UTF-8"?>
+++<project version="4">
+++  <component name="RunConfigurationProducerService">
+++    <option name="ignoredProducers">
+++      <set>
+++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+++      </set>
+++    </option>
+++  </component>
+++</project>
++\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1651739252694)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00__Changes_.xml	(date 1651739252694)
+@@ -0,0 +1,14 @@
++<changelist name="Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]" date="1651658449842" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 04/05/2022 12:00 [Changes]" />
++  <binary>
++    <option name="BEFORE_PATH" />
++    <option name="AFTER_PATH" value="image/generic_image.jpg" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/generic_image.jpg" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" />
++    <option name="AFTER_PATH" value="image/Hundetraening2_content.png" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_12_00_[Changes]/Hundetraening2_content.png" />
++  </binary>
++</changelist>
+\ No newline at end of file
+Index: css/hold.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/hold.css b/css/hold.css
+new file mode 100644
+--- /dev/null	(date 1651739200033)
++++ b/css/hold.css	(date 1651739200033)
+@@ -0,0 +1,16 @@
++#wrapper{
++    background-color: #DADADA;
++}
++
++.holdimage{
++    width: 540px;
++    height: 300px;
++    border: 2px solid #facd8a;
++}
++
++.holdbutton{
++    border: 2px solid #facd8a;
++    width: 25%;
++    height: 30px;
++}
++
+Index: css/bootstrap.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/bootstrap.css b/css/bootstrap.css
+new file mode 100644
+--- /dev/null	(date 1651739200033)
++++ b/css/bootstrap.css	(date 1651739200033)
+@@ -0,0 +1,456 @@
++.container{
++    width: 100%;
++    padding-right: var(--bs-gutter-x, 0.75rem);
++    padding-left: var(--bs-gutter-x, 0.75rem);
++    margin-right: auto;
++    margin-left: auto;
++}
++
++.row {
++    --bs-gutter-x: 1.5rem;
++    --bs-gutter-y: 0;
++    display: flex;
++    flex-wrap: wrap;
++    margin-top: calc(var(--bs-gutter-y) * -1);
++    margin-right: calc(var(--bs-gutter-x) * -.5);
++    margin-left: calc(var(--bs-gutter-x) * -.5);
++}
++
++@media (min-width: 576px) {
++    .container {
++        max-width: 540px;
++    }
++}
++@media (min-width: 768px) {
++    .container {
++        max-width: 720px;
++    }
++}
++@media (min-width: 992px) {
++    .container {
++        max-width: 960px;
++    }
++}
++@media (min-width: 1200px) {
++    .container {
++        max-width: 1140px;
++    }
++}
++@media (min-width: 1400px) {
++    .container {
++        max-width: 1320px;
++    }
++}
++.col {
++    flex: 1 0 0%;
++}
++
++.col-auto {
++    flex: 0 0 auto;
++    width: auto;
++}
++
++.col-1 {
++    flex: 0 0 auto;
++    width: 8.33333333%;
++}
++
++.col-2 {
++    flex: 0 0 auto;
++    width: 16.66666667%;
++}
++
++.col-3 {
++    flex: 0 0 auto;
++    width: 25%;
++}
++
++.col-4 {
++    flex: 0 0 auto;
++    width: 33.33333333%;
++}
++
++.col-5 {
++    flex: 0 0 auto;
++    width: 41.66666667%;
++}
++
++.col-6 {
++    flex: 0 0 auto;
++    width: 50%;
++}
++
++.col-7 {
++    flex: 0 0 auto;
++    width: 58.33333333%;
++}
++
++.col-8 {
++    flex: 0 0 auto;
++    width: 66.66666667%;
++}
++
++.col-9 {
++    flex: 0 0 auto;
++    width: 75%;
++}
++
++.col-10 {
++    flex: 0 0 auto;
++    width: 83.33333333%;
++}
++
++.col-11 {
++    flex: 0 0 auto;
++    width: 91.66666667%;
++}
++
++.col-12 {
++    flex: 0 0 auto;
++    width: 100%;
++}
++
++@media (min-width: 576px) {
++    .col-sm-auto {
++        flex: 0 0 auto;
++        width: auto;
++    }
++
++    .col-sm-1 {
++        flex: 0 0 auto;
++        width: 8.33333333%;
++    }
++
++    .col-sm-2 {
++        flex: 0 0 auto;
++        width: 16.66666667%;
++    }
++
++    .col-sm-3 {
++        flex: 0 0 auto;
++        width: 25%;
++    }
++
++    .col-sm-4 {
++        flex: 0 0 auto;
++        width: 33.33333333%;
++    }
++
++    .col-sm-5 {
++        flex: 0 0 auto;
++        width: 41.66666667%;
++    }
++
++    .col-sm-6 {
++        flex: 0 0 auto;
++        width: 50%;
++    }
++
++    .col-sm-7 {
++        flex: 0 0 auto;
++        width: 58.33333333%;
++    }
++
++    .col-sm-8 {
++        flex: 0 0 auto;
++        width: 66.66666667%;
++    }
++
++    .col-sm-9 {
++        flex: 0 0 auto;
++        width: 75%;
++    }
++
++    .col-sm-10 {
++        flex: 0 0 auto;
++        width: 83.33333333%;
++    }
++
++    .col-sm-11 {
++        flex: 0 0 auto;
++        width: 91.66666667%;
++    }
++
++    .col-sm-12 {
++        flex: 0 0 auto;
++        width: 100%;
++    }
++}
++@media (min-width: 768px) {
++    .col-md-auto {
++        flex: 0 0 auto;
++        width: auto;
++    }
++
++    .col-md-1 {
++        flex: 0 0 auto;
++        width: 8.33333333%;
++    }
++
++    .col-md-2 {
++        flex: 0 0 auto;
++        width: 16.66666667%;
++    }
++
++    .col-md-3 {
++        flex: 0 0 auto;
++        width: 25%;
++    }
++
++    .col-md-4 {
++        flex: 0 0 auto;
++        width: 33.33333333%;
++    }
++
++    .col-md-5 {
++        flex: 0 0 auto;
++        width: 41.66666667%;
++    }
++
++    .col-md-6 {
++        flex: 0 0 auto;
++        width: 50%;
++    }
++
++    .col-md-7 {
++        flex: 0 0 auto;
++        width: 58.33333333%;
++    }
++
++    .col-md-8 {
++        flex: 0 0 auto;
++        width: 66.66666667%;
++    }
++
++    .col-md-9 {
++        flex: 0 0 auto;
++        width: 75%;
++    }
++
++    .col-md-10 {
++        flex: 0 0 auto;
++        width: 83.33333333%;
++    }
++
++    .col-md-11 {
++        flex: 0 0 auto;
++        width: 91.66666667%;
++    }
++
++    .col-md-12 {
++        flex: 0 0 auto;
++        width: 100%;
++    }
++}
++@media (min-width: 992px) {
++    .col-lg-auto {
++        flex: 0 0 auto;
++        width: auto;
++    }
++
++    .col-lg-1 {
++        flex: 0 0 auto;
++        width: 8.33333333%;
++    }
++
++    .col-lg-2 {
++        flex: 0 0 auto;
++        width: 16.66666667%;
++    }
++
++    .col-lg-3 {
++        flex: 0 0 auto;
++        width: 25%;
++    }
++
++    .col-lg-4 {
++        flex: 0 0 auto;
++        width: 33.33333333%;
++    }
++
++    .col-lg-5 {
++        flex: 0 0 auto;
++        width: 41.66666667%;
++    }
++
++    .col-lg-6 {
++        flex: 0 0 auto;
++        width: 50%;
++    }
++
++    .col-lg-7 {
++        flex: 0 0 auto;
++        width: 58.33333333%;
++    }
++
++    .col-lg-8 {
++        flex: 0 0 auto;
++        width: 66.66666667%;
++    }
++
++    .col-lg-9 {
++        flex: 0 0 auto;
++        width: 75%;
++    }
++
++    .col-lg-10 {
++        flex: 0 0 auto;
++        width: 83.33333333%;
++    }
++
++    .col-lg-11 {
++        flex: 0 0 auto;
++        width: 91.66666667%;
++    }
++
++    .col-lg-12 {
++        flex: 0 0 auto;
++        width: 100%;
++    }
++}
++@media (min-width: 1200px) {
++    .col-xl-auto {
++        flex: 0 0 auto;
++        width: auto;
++    }
++
++    .col-xl-1 {
++        flex: 0 0 auto;
++        width: 8.33333333%;
++    }
++
++    .col-xl-2 {
++        flex: 0 0 auto;
++        width: 16.66666667%;
++    }
++
++    .col-xl-3 {
++        flex: 0 0 auto;
++        width: 25%;
++    }
++
++    .col-xl-4 {
++        flex: 0 0 auto;
++        width: 33.33333333%;
++    }
++
++    .col-xl-5 {
++        flex: 0 0 auto;
++        width: 41.66666667%;
++    }
++
++    .col-xl-6 {
++        flex: 0 0 auto;
++        width: 50%;
++    }
++
++    .col-xl-7 {
++        flex: 0 0 auto;
++        width: 58.33333333%;
++    }
++
++    .col-xl-8 {
++        flex: 0 0 auto;
++        width: 66.66666667%;
++    }
++
++    .col-xl-9 {
++        flex: 0 0 auto;
++        width: 75%;
++    }
++
++    .col-xl-10 {
++        flex: 0 0 auto;
++        width: 83.33333333%;
++    }
++
++    .col-xl-11 {
++        flex: 0 0 auto;
++        width: 91.66666667%;
++    }
++
++    .col-xl-12 {
++        flex: 0 0 auto;
++        width: 100%;
++    }
++}
++@media (min-width: 1400px) {
++    .col-xxl-auto {
++        flex: 0 0 auto;
++        width: auto;
++    }
++
++    .col-xxl-1 {
++        flex: 0 0 auto;
++        width: 8.33333333%;
++    }
++
++    .col-xxl-2 {
++        flex: 0 0 auto;
++        width: 16.66666667%;
++    }
++
++    .col-xxl-3 {
++        flex: 0 0 auto;
++        width: 25%;
++    }
++
++    .col-xxl-4 {
++        flex: 0 0 auto;
++        width: 33.33333333%;
++    }
++
++    .col-xxl-5 {
++        flex: 0 0 auto;
++        width: 41.66666667%;
++    }
++
++    .col-xxl-6 {
++        flex: 0 0 auto;
++        width: 50%;
++    }
++
++    .col-xxl-7 {
++        flex: 0 0 auto;
++        width: 58.33333333%;
++    }
++
++    .col-xxl-8 {
++        flex: 0 0 auto;
++        width: 66.66666667%;
++    }
++
++    .col-xxl-9 {
++        flex: 0 0 auto;
++        width: 75%;
++    }
++
++    .col-xxl-10 {
++        flex: 0 0 auto;
++        width: 83.33333333%;
++    }
++
++    .col-xxl-11 {
++        flex: 0 0 auto;
++        width: 91.66666667%;
++    }
++
++    .col-xxl-12 {
++        flex: 0 0 auto;
++        width: 100%;
++    }
++}
++
++
++
++.d-flex {
++    display: flex !important;
++}
++
++.justify-content-center {
++    justify-content: center !important;
++}
++
++.align-items-center {
++    align-items: center !important;
++}
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1651739200031)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2022_10_41_[Changes]/shelved.patch	(date 1651739200031)
+@@ -0,0 +1,104 @@
++Index: hold.html
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n</body>\r\n</html>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/hold.html b/hold.html
++--- a/hold.html	(revision 5929aa976c1456202d798c258238e9f3a140fe29)
+++++ b/hold.html	(date 1651653419216)
++@@ -2,9 +2,19 @@
++ <html lang="en">
++ <head>
++     <meta charset="UTF-8">
++-    <title>Title</title>
+++    <title>Hold</title>
+++    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+++    <script src="headerfooter.js"></script>
+++    <link rel="stylesheet" href="css/hold.css">
+++    <link rel="stylesheet" href="css/generisk.css">
++ </head>
++ <body>
++ 
+++<div id="header"></div>
+++
+++<div id="wrapper">
+++    <center><h1>HOLD</h1></center>
+++</div>
+++
++ </body>
++ </html>
++\ No newline at end of file
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"generisk funktion\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/css/generisk.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/generisk.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/header.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"Emma\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\r\n      <created>1651331471949</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1651331471949</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision 5929aa976c1456202d798c258238e9f3a140fe29)
+++++ b/.idea/workspace.xml	(date 1651653496893)
++@@ -5,16 +5,29 @@
++   </component>
++   <component name="ChangeListManager">
++     <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="generisk funktion">
+++      <change afterPath="$PROJECT_DIR$/css/hold.css" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_2022__12_51__Changes_1.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_22__10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_05_22__10_38__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__10_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__10_56__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2022__14_09__Changes_.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_22__10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_22__10_38__Changes_.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/hold.html" beforeDir="false" afterPath="$PROJECT_DIR$/hold.html" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++     <option name="LAST_RESOLUTION" value="IGNORE" />
++   </component>
+++  <component name="FileTemplateManagerImpl">
+++    <option name="RECENT_TEMPLATES">
+++      <list>
+++        <option value="CSS File" />
+++      </list>
+++    </option>
+++  </component>
++   <component name="Git.Merge.Settings">
++     <option name="BRANCH" value="Emma" />
++   </component>
++@@ -33,6 +46,7 @@
++     <option name="showLibraryContents" value="true" />
++   </component>
++   <component name="PropertiesComponent">
+++    <property name="list.type.of.created.stylesheet" value="CSS" />
++     <property name="node.js.detected.package.eslint" value="true" />
++     <property name="node.js.detected.package.tslint" value="true" />
++     <property name="node.js.selected.package.eslint" value="(autodetect)" />
++@@ -59,5 +73,6 @@
++         </entry>
++       </map>
++     </option>
+++    <option name="oldMeFiltersMigrated" value="true" />
++   </component>
++ </project>
++\ No newline at end of file
++Index: css/hold.css
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/css/hold.css b/css/hold.css
++new file mode 100644
++--- /dev/null	(date 1651653225590)
+++++ b/css/hold.css	(date 1651653225590)
++@@ -0,0 +1,3 @@
+++#wrapper{
+++    background-color: #DADADA;
+++}
++\ No newline at end of file
+Index: hold.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n</head>\n<body>\n\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/hold.html b/hold.html
+--- a/hold.html	(revision 57e11fc83322c56c1b92cb9940b9a90471bff718)
++++ b/hold.html	(date 1651739200034)
+@@ -2,9 +2,93 @@
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+-    <title>Title</title>
++    <title>Hold</title>
++    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
++    <script src="headerfooter.js"></script>
++    <link rel="stylesheet" href="css/hold.css">
++    <link rel="stylesheet" href="css/generisk.css">
++    <link rel="stylesheet" href="css/bootstrap.css">
+ </head>
+ <body>
+ 
++<div id="header"></div>
++
++<div id="wrapper">
++    <br><br>
++    <center><h1>HOLD</h1></center>
++    <br><br>
++
++    <div class="container">
++        <div class="row">
++            <div class="col-6">
++                <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
++            </div>
++            <div class="col-6">
++                <h2>Hvalpehold</h2>
++                <br>
++                <h3 style="font-weight: normal">Alder: 10 uger til 5 mdr.</h3>
++                <br>
++                <p style="font-weight: normal">
++                    Lorem ipsum dolor sit amet, consectetur
++                    adipiscing elit. Cras et aliquet purus, at
++                    dignissim enim. Duis a nunc eros.
++                    Donec vehicula felis quis metus vehicula porttitor.
++                </p>
++                <br>
++                <br>
++                <h3>Pris: 750 kr. (6x 1 times træning)</h3>
++                <p style="font-style: italic">(6 kursister pr. hold)</p>
++
++            </div>
++        </div>
++        <br><br>
++        <div class="row">
++            <div class="col-6" style="text-align: right">
++                <h2>Hverdaslydighed</h2>
++                <br>
++                <h3 style="font-weight: normal">Alder: 6 mdr. og op</h3>
++                <br>
++                <p style="font-weight: normal">
++                    Lorem ipsum dolor sit amet, consectetur
++                    adipiscing elit. Cras et aliquet purus, at
++                    dignissim enim. Duis a nunc eros.
++                    Donec vehicula felis quis metus vehicula porttitor.
++                </p>
++                <br>
++                <br>
++                <h3>Pris: 750 kr. (6x 1 times træning)</h3>
++                <p style="font-style: italic">(6 kursister pr. hold)</p>
++
++            </div>
++            <div class="col-6" style="text-align:right">
++                    <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
++            </div>
++    </div>
++        <br><br>
++        <div class="row">
++            <div class="col-6">
++                <img class="holdimage" src="image/Hundetraening2_content.png" alt="image">
++            </div>
++            <div class="col-6">
++                <h2>Enetime</h2>
++                <br>
++                <h3 style="font-weight: normal">Alder: Alle</h3>
++                <br>
++                <p style="font-weight: normal">
++                    Lorem ipsum dolor sit amet, consectetur
++                    adipiscing elit. Cras et aliquet purus, at
++                    dignissim enim. Duis a nunc eros.
++                    Donec vehicula felis quis metus vehicula porttitor.
++                </p>
++                <br>
++                <br>
++                <h3>Pris: 600 kr. (1x 1 times træning)</h3>
++                <h3>1500 kr. (6x 1 times træning (spar 300 kr.))</h3>
++            </div>
++        </div>
++    </div>
++    <center><button class="holdbutton">Klik her for at booke!</button></center>
++</div>
++<div id="footer"></div>
+ </body>
+ </html>
+\ No newline at end of file
