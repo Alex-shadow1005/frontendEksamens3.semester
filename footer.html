@@ -9,20 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
 </head>
-<script>
-    function check(){
-        var input = document.getElementById("email");
-        var notchMiddle = document.getElementsByClassName("form-notch-middle");
-        if(input.value.length !== 0){
-            input.classList.add("active");
-            notchMiddle.style.borderTopStyle = "transparent";
-            console.log(input.value.length);
-        } else if(input.value.length === 0){
-            input.classList.remove("active");
-            console.log(input.value.length);
-        }
-    }
-</script>
 <footer>
     <div class="container">
         <div class="row">
@@ -36,16 +22,8 @@
             <div class="col-6 col-xxl-6 col-xl-6 col-sm-12">
                 <h5>Få fede særtilbud ved at tilmelde dig vores tilbudsbrev her!</h5>
                 <div class="row">
-                    <div class="col-md-8 col-12">
-                        <div class="form-outline">
-                            <input type="email" id="email" name="email" class="form-control" onkeyup="check()">
-                            <label class="form-label" for="email" style="margin-left: 0px;">Email Address</label>
-                            <div class="form-notch">
-                                <div class="form-notch-leading" style="width: 9px;"></div>
-                                <div class="form-notch-middle" style="width: 100px;"></div>
-                                <div class="form-notch-trailing"></div>
-                            </div>
-                        </div>
+                    <div class="col-md-8 col-12 footerform">
+                        <input type="email" name="email" class="form-control shadow-none" placeholder="Email Address">
                     </div>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary footerbutton">Tilmeld</button>
@@ -54,7 +32,6 @@
             </div>
         </div>
     </div>
-
     <!--<section class="contact">
         <a id="contact"></a>
             <div class="contact-left">
