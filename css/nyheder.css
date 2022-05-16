@@ -7,7 +7,8 @@ button{
  padding:16px;
 }
 #wrapper{
- background-color: #DADADA;
+ background-color: #303030;
+ color: white;
 }
 #more {
  display: none;

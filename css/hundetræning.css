@@ -1,6 +1,6 @@
 #wrapper{
-    background-color: #DADADA;
-    color: #000 !important;
+    background-color: #303030;
+    color: white !important;
 }
 
 .holdimage{
@@ -22,5 +22,9 @@
     background: #cacaca;
     opacity: 0.8;
     transition: all 0.2s ease-in-out;
+}
+.container h1{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
