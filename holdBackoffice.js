@@ -21,7 +21,6 @@ function createHold() {
     createInput("Underoverskrift", "underOverskrift", "text");
     createInput("Brødtekst",  "tekst", "text")
 
-
     setupSubmitButton();
 
     openModal();
