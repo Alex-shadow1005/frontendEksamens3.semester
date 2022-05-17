@@ -31,6 +31,7 @@ body{
 }
 
 
+/* Vertical spacing between 4 main images */
 .container .row .col-6{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -40,42 +41,46 @@ body{
 .række1-billede1{
     font-family: 'Quintessential', cursive;
     background-image: url("../image/natmedhunde.jpg");
+    background-size: 100% 500px;
+    width: 100%;
+    height: 500px;
     float: left;
     text-align: center;
     vertical-align: middle;
-    width: 100%;
-    height: 500px;
     border: 2px solid #facd8a;
 }
 .række1-billede2{
     font-family: 'Quintessential', cursive;
     background-image: url("../image/tyson.jpg");
+    background-size: 100% 500px;
+    width: 100%;
+    height: 500px;
     float: right;
     text-align: center;
     vertical-align: middle;
-    width: 100%;
-    height: 500px;
     border: 2px solid #facd8a;
 }
 .række2-billede1{
     font-family: 'Quintessential', cursive;
     background-image: url("../image/labarsorthvid.jpg");
+    background-size: 100% 500px;
+    width: 100%;
+    height: 500px;
     float: left;
-     text-align: center;
+    text-align: center;
     vertical-align: middle;
-     width: 100%;
-     height: 500px;
-     border: 2px solid #facd8a;
+    border: 2px solid #facd8a;
 }
 .række2-billede2{
     font-family: 'Quintessential', cursive;
     background-image: url("../image/labar.jpg");
+    background-size: 100% 500px;
+    width: 100%;
+    height: 500px;
     float: right;
-      text-align: center;
-     vertical-align: middle;
-      width: 100%;
-      height: 500px;
-      border: 2px solid #facd8a;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #facd8a;
 }
 .række1-billede1 a{
     color: white;
@@ -109,7 +114,6 @@ body{
     transform: translate(-50%, -50%);
     opacity: 0.5;
 }
-
 
 
 
