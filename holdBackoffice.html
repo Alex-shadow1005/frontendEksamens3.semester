@@ -4,22 +4,56 @@
     <meta charset="UTF-8">
     <title>Hold Backoffice</title>
     <script src="holdBackoffice.js" defer></script>
+    <script src="hentHold.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
-
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
     <link rel="stylesheet" href="css/backOffice.css">
-
+    <script src="hentHold.js" defer></script>
 
 </head>
-
-<div class="header">
-    <ul class="nav-ul">
-       <!-- <li class="nav-li"><a onclick="createInfoboks()" class="nav-login, center" style="float: left">Opret infoboks</a></li>-->
-        <div class="nav-li"><a onclick="createHold()" class="nav-login, center" style="float: left">Opret hold</a></div>
-      <!--  <li class="nav-li"><a href="login.html" class="nav-login, mainBtn">Sign out</a></li>-->
-    </ul>
-</div>
 <body>
+
+<!--Sidenavigationsbar-->
+<div class="sidebar-wrapper">
+    <div class="sidebar">
+        <h4>Backoffice</h4>
+        <ul>
+            <li><a href="holdBackoffice.html">Hold</a></li>
+            <li><a href="omOsBackoffice.html">Om Os</a></li>
+            <li><a href="tipsogtricksBackoffice">Tips og Tricks</a></li>
+            <li><a href="nyhederBackoffice">Nyheder</a></li>
+            <li><a href="login.html">Log ud</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="nav-ul">
+            <!-- <li class="nav-li"><a onclick="createInfoboks()" class="nav-login, center" style="float: left">Opret infoboks</a></li>-->
+            <button class="opret-hold-btn" onclick="createHold()" style="float: left">Opret hold</button>
+            <button class="view-page-btn"><a href="holdtest.html" style="color: white">Gå til Hold siden</a></button>
+            <!--  <li class="nav-li"><a href="login.html" class="nav-login, mainBtn">Sign out</a></li>-->
+        </div>
+    </div>
+</div>
+
+<!--hold tabel-->
+<h3 class="table-title" style="margin-right: 10px;">Hold</h3>
+
+<section>
+    <div id="hold-container">
+        <div class="hold-container-element">
+            <div class="hold-container-element-id">
+                <b>ID</b>
+            </div>
+            <div class="hold-container-element-title">
+                <b>Holdnavn</b>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Modal-->
 <div id="overlay">
     <div class="modal-content" style="max-width: 600px; margin: 5% auto auto;">
         <div class="modal-header">
