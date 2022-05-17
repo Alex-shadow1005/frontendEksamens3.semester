@@ -1,10 +1,8 @@
-*{
 
-    font-family: Astonice Semibold;
-
-
-}
 body{
+    background-color: #303030;
+}
+#wrapper{
     background-color: #303030;
 }
 
@@ -15,7 +13,8 @@ body{
     font-size: 5em;
     text-align: center;
     padding-bottom: 100px;
-    padding-top: 500px;
+    padding-top: 50px;
+    margin-bottom: 0 !important;
 }
 
 
@@ -26,14 +25,21 @@ body{
     font-size: 2em;
     text-align: center;
     padding-bottom: 7cm;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 0 !important;
 }
 
 
-
+.container .row .col-6{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
 
 .række1-billede1{
-    background-image: url("../image/logo4.png");
+    font-family: 'Quintessential', cursive;
+    background-image: url("../image/natmedhunde.jpg");
     float: left;
     text-align: center;
     vertical-align: middle;
@@ -42,28 +48,28 @@ body{
     border: 2px solid #facd8a;
 }
 .række1-billede2{
-    background-image: url("../image/logo4.png");
+    font-family: 'Quintessential', cursive;
+    background-image: url("../image/tyson.jpg");
     float: right;
     text-align: center;
     vertical-align: middle;
     width: 100%;
     height: 500px;
     border: 2px solid #facd8a;
-
 }
 .række2-billede1{
-    background-image: url("../image/logo4.png");
+    font-family: 'Quintessential', cursive;
+    background-image: url("../image/labarsorthvid.jpg");
     float: left;
      text-align: center;
     vertical-align: middle;
      width: 100%;
      height: 500px;
      border: 2px solid #facd8a;
-
-
 }
 .række2-billede2{
-    background-image: url("../image/logo4.png");
+    font-family: 'Quintessential', cursive;
+    background-image: url("../image/labar.jpg");
     float: right;
       text-align: center;
      vertical-align: middle;
@@ -77,7 +83,7 @@ body{
     position: relative;
     top: 45%;
     transform: translate(-50%, -50%);
-    opacity: 0.3;
+    opacity: 0.5;
 }
 .række1-billede2 a{
     color: white;
@@ -85,7 +91,7 @@ body{
     position: relative;
     top: 45%;
     transform: translate(-50%, -50%);
-    opacity: 0.3;
+    opacity: 0.5;
 }
 .række2-billede1 a{
     color: white;
@@ -93,7 +99,7 @@ body{
     position: relative;
     top: 45%;
     transform: translate(-50%, -50%);
-    opacity: 0.3;
+    opacity: 0.5;
 }
 .række2-billede2 a{
     color: white;
@@ -101,8 +107,12 @@ body{
     position: relative;
     top: 45%;
     transform: translate(-50%, -50%);
-    opacity: 0.3;
+    opacity: 0.5;
 }
+
+
+
+
 
 
 

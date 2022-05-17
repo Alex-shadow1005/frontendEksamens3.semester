@@ -1,5 +1,6 @@
 #wrapper{
-    background-color: #DADADA;
+    background-color: #303030;
+    color: white;
 }
 
 img{
@@ -10,4 +11,7 @@ img{
     width: 100% !important;
     height: 450px;
     border: 2px solid #facd8a;
+}
+.container p{
+    font-size: 20px;
 }
