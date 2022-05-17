@@ -10,12 +10,49 @@
 }
 
 .holdbutton{
-    border-radius: 10px;
-    border: 2px solid #facd8a;
-    width: 25%;
-    height: 30px;
-    opacity: 1;
+    background-color: #facd8a;
+    border-radius: 30px;
+    border: 4px solid #facd8a;
+    font-size: 20px;
+    display: inline;
+    padding: 20px;
     transition: all 0.2s ease-in-out;
+    margin-bottom: 80px;
+    margin-top: 70px;
+    display: inline-block;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+
+.holdbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.holdbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.holdbutton:hover span {
+    padding-right: 25px;
+}
+
+.holdbutton:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .holdbutton:hover{
@@ -28,3 +65,28 @@
     padding-bottom: 50px;
 }
 
+.row button {
+    border-radius: 15px;
+    border-style: solid;
+    text-decoration: none;
+
+
+
+
+}
+.textbox p{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #facd8a;
+    text-align: center;
+    width: 70%;
+    padding: 95px;
+    padding-top: 30px;
+    margin: auto;
+    margin-top: 80px;
+    font-size: 15px;
+
+
+
+}

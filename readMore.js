@@ -61,3 +61,56 @@ function myFunctionFour() {
         moreTextFour.style.display = "inline";
     }
 }
+
+
+function myFunctionDog1() {
+    var dotsDog1 = document.getElementById("dotsDog1");
+    var moreTextDog1 = document.getElementById("moreDog1");
+    var btnTextDog1 = document.getElementById("myBtnDog1");
+
+    if (dotsDog1.style.display === "none") {
+        dotsDog1.style.display = "inline";
+        btnTextDog1.innerHTML = "Læs mere";
+        moreTextDog1.style.display = "none";
+    } else {
+        dotsDog1.style.display = "none";
+        btnTextDog1.innerHTML = "Læs mindre";
+        moreTextDog1.style.display = "inline";
+    }
+}
+
+
+
+    function myFunctionDog2() {
+        var dotsDog2 = document.getElementById("dotsDog2");
+        var moreTextDog2 = document.getElementById("moreDog2");
+        var btnTextDog2 = document.getElementById("myBtnDog2");
+
+        if (dotsDog2.style.display === "none") {
+            dotsDog2.style.display = "inline";
+            btnTextDog2.innerHTML = "Læs mere";
+            moreTextDog2.style.display = "none";
+        } else {
+            dotsDog2.style.display = "none";
+            btnTextDog2.innerHTML = "Læs mindre";
+            moreTextDog2.style.display = "inline";
+        }
+    }
+
+
+            function myFunctionDog3() {
+                var dotsDog3 = document.getElementById("dotsDog3");
+                var moreTextDog3 = document.getElementById("moreDog3");
+                var btnTextDog3 = document.getElementById("myBtnDog3");
+
+                if (dotsDog3.style.display === "none") {
+                    dotsDog3.style.display = "inline";
+                    btnTextDog3.innerHTML = "Læs mere";
+                    moreTextDog3.style.display = "none";
+                } else {
+                    dotsDog3.style.display = "none";
+                    btnTextDog3.innerHTML = "Læs mindre";
+                    moreTextDog3.style.display = "inline";
+
+                }
+            }
