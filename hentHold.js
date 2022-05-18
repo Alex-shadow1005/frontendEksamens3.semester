@@ -27,8 +27,8 @@ async function loadHold() {
             underOverskrift(col, hold);
             breaktag(col);
             ptekst(col, hold);
+            button(col, hold);
             breaktag(col);
-
             breaktag(col);
             pris(col, hold);
             ptekstitalic(col, hold);
@@ -66,8 +66,8 @@ async function loadHold() {
             underOverskrift(col1, hold);
             breaktag(col1);
             ptekst(col1, hold);
+            button(col1, hold);
             breaktag(col1);
-
             breaktag(col1);
             pris(col1, hold);
             ptekstitalic(col1, hold);
@@ -98,18 +98,29 @@ function underOverskrift(col, hold){
 function ptekst(col, hold){
     const tekst = document.createElement("p");
     tekst.innerText = hold.tekst;
+    if(tekst.innerText.length > 225){
+        tekst.innerText = tekst.innerText.slice(0, 150) + "...";
+    }
     col.appendChild(tekst);
+}
+function button(col, hold){
+    const button = document.createElement("button");
+    button.innerText = "Læs mere";
+    button.addEventListener('click', () => {
+        localStorage.setItem("show", JSON.stringify(hold.holdId));
+        window.location.href = "specifikthold.html";
+    })
+    col.appendChild(button);
 }
 function pris(col, hold){
     const underoverskrift = document.createElement("h3");
     underoverskrift.innerText = hold.pris;
     col.appendChild(underoverskrift);
-
 }
 
 function ptekstitalic(col, hold){
     const tekst = document.createElement("p");
-    tekst.innerText = hold.antalKursister;
+    tekst.innerText = hold.antalKursister + " kursister pr. hold";
     tekst.setAttribute("style", "font-style: italic");
     col.appendChild(tekst);
 }
@@ -123,6 +134,7 @@ function createImg(col, val){
     col.appendChild(img);
 
 }
+
 document.addEventListener('DOMContentLoaded', () => {
 
     loadHold();
