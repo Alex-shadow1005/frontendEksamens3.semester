@@ -1,11 +1,18 @@
+
 const id = localStorage.getItem("show");
 
 console.log(id);
 
 const holdContainer = document.getElementById("specifikthold");
 
+function fetchSpecifiktHold(url) {
+    return fetch(url).then(response => response.json());
+}
+
+loadSpecifiktHold();
 async function loadSpecifiktHold() {
     const specifiktHold = await fetchSpecifiktHold("http://localhost:8080/api/hold/" + id);
+    console.table(specifiktHold);
 
     //image
 
@@ -18,7 +25,7 @@ async function loadSpecifiktHold() {
     //underoverskrift
     const showHoldUnderOverskrift = document.createElement("h3");
     showHoldUnderOverskrift.classList.add("underOverskrift");
-    showHoldUnderOverskrift.innerText = specifiktHold.under_overskrift;
+    showHoldUnderOverskrift.innerText = specifiktHold.underOverskrift;
     holdContainer.appendChild(showHoldUnderOverskrift);
 
     //tekst
@@ -41,8 +48,7 @@ async function loadSpecifiktHold() {
     holdContainer.appendChild(showHoldKursister);
 }
 
-function fetchSpecifiktHold(url) {
-    return fetch(url).then(response => response.json());
-}
 
-loadSpecifiktHold();
+
+
+

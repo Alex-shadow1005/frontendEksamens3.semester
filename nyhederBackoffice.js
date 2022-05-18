@@ -28,8 +28,6 @@ function createNyhed() {
 }
 
 
-
-
 //Modal build functions
 
 function setTitle(title) {

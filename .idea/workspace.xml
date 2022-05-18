@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/specifikthold.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]1/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022__10_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22,_15_11_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22__15_11__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_53_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml" beforeDir="false" />
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment=" footer done, needs colour coordination.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hentHold.js" beforeDir="false" afterPath="$PROJECT_DIR$/hentHold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/specifikthold.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyhederBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/nyhederBackoffice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specifikthold.html" beforeDir="false" afterPath="$PROJECT_DIR$/specifikthold.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
