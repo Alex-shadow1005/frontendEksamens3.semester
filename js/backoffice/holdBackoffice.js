@@ -12,15 +12,14 @@ let holdForm = false;
 const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
-
-//OPRET ET HOLD
 function createHold() {
     setMethod("post");
     setTitle("Opret hold");
-    setFormDestination("http://localhost:8080/api/hold", "post");
+    setFormDestination("http://localhost:8080/api/hold/upload/image", "post");
 
     createInput("Hold navn","name", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
+<<<<<<< HEAD:js/backoffice/holdBackoffice.js
     createInput("Brødtekst",  "tekst", "text")
     createInput("Pris",  "pris", "text")
     createInput("Antal kursister",  "antalKursister", "text")
@@ -41,15 +40,20 @@ function editHold(hold) {
     createInput("Tekst", "tekst", "text");
     createInput("Pris", "pris", "text");
     createInput("Antal kursister", "antalKursister", "text");
+=======
+    createInput("Brødtekst",  "tekst", "text");
+    createInput("Pris",  "pris", "text");
+    createInput("Antal kursister",  "antalKursister", "text");
+    createFileUpload("Billede",  "holdImage", "file");
+>>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
-    displayHold(hold);
 
-    createDeleteButton("http://localhost:8080/api/hold/" + hold.holdId);
     setupSubmitButton();
 
     openModal();
 }
 
+<<<<<<< HEAD:js/backoffice/holdBackoffice.js
 //SLET HOLD
 function deleteEntity(url) {
     const fetchOptions = {
@@ -84,9 +88,11 @@ function fetchEntities(url) {
 
 //LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
+=======
+>>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
-loadHold();
 
+<<<<<<< HEAD:js/backoffice/holdBackoffice.js
 async function loadHold() {
     const holdene = await fetchEntities("http://localhost:8080/api/hold");
 
@@ -127,6 +133,8 @@ async function displayHold(hold) {
         form.appendChild(div);
     });
 }
+=======
+>>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
 //Modal build functions
 
@@ -160,6 +168,46 @@ function createInput(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
+async function createFileUpload(inputName, idName, type, value) {
+    const title = document.createElement("p");
+    const text = document.createTextNode(inputName);
+    title.appendChild(text);
+
+    const input = document.createElement("input");
+    input.id = idName;
+    input.name = idName;
+    input.type = type;
+
+
+    if (value !== undefined) {
+        input.value = value;
+    }
+    input.classList.add("js-input");
+
+
+    form.appendChild(title);
+    form.appendChild(input);
+
+}
+
+async function createDropdownInput(url, inputName, idName) {
+    const title = document.createElement("p");
+    const text = document.createTextNode(inputName);
+    title.appendChild(text);
+
+    const entities = await fetchEntities(url);
+    const select = document.createElement("select");
+    select.id = idName;
+    select.name = idName;
+
+    for (let i = 0; i < entities.length; i++) {
+        let entity = entities[i];
+        select.add(new Option(entity.name, entity.id));
+    }
+
+    form.appendChild(title);
+    form.appendChild(select);
+}
 
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
@@ -169,65 +217,11 @@ function setupSubmitButton() {
 }
 
 function createFormEventListener() {
+
     form.addEventListener("submit", handleFormSubmit);
+
 }
 
-async function handleFormSubmit(event) {
-    event.preventDefault();
-
-    const formEvent = event.currentTarget;
-    const url = formEvent.action;
-
-    try {
-        const formData = new FormData(formEvent);
-
-        await postFormDataAsJson(url, formData);
-    } catch (err) {
-
-    }
-}
-
-async function postFormDataAsJson(url, formData) {
-    const plainFormData = Object.fromEntries(formData.entries());
-    let formDataJsonString;
-
-    if (holdForm) {
-        const holdId  = document.getElementById("hold").value;
-
-
-        const hold = {};
-        hold.holdId = holdId;
-        hold.name = "";
-        hold.underOverskrift = "";
-        hold.tekst = "";
-        hold.pris = "";
-        hold.antalKursister = "";
-
-
-        formDataJsonString = JSON.stringify(hold);
-
-        holdForm = false;
-    } else {
-        formDataJsonString = JSON.stringify(plainFormData);
-    }
-
-    const fetchOptions = {
-        method: this.method,
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: formDataJsonString
-    };
-
-    const response = await fetch(url, fetchOptions);
-
-    if (!response) {
-        const errorMessage = await response.text();
-        throw new Error(errorMessage);
-    }
-
-    return response.json();
-}
 
 
 function openModal() {
