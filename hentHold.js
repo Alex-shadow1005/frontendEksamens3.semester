@@ -1,4 +1,9 @@
 const divContainer = document.getElementById("con");
+const url = "http://localhost:8080/api/hold/get/image/"
+
+const getImage = async (url) => {
+    return await fetch(url).then(res => res.url)
+}
 
 async function loadHold() {
     const holdList = await fetch("http://localhost:8080/api/hold").then(response => response.json());
@@ -18,12 +23,12 @@ async function loadHold() {
             col.setAttribute("style","text-align: right");
             row.appendChild(col);
             overskrift(col, hold);
-            breaktag(col);
+
             underOverskrift(col, hold);
             breaktag(col);
             ptekst(col, hold);
             breaktag(col);
-            breaktag(col);
+
             breaktag(col);
             pris(col, hold);
             ptekstitalic(col, hold);
@@ -36,8 +41,10 @@ async function loadHold() {
 
             row.appendChild(col1);
 
-            createImg(col1);
-            breaktag(col1);
+            getImage(url + hold.name).then(result => {
+                createImg(col1,result);
+            })
+
 
         } else {
             console.log((i+2)%2==1);
@@ -45,21 +52,22 @@ async function loadHold() {
 
             row.appendChild(col);
 
+            getImage(url + hold.name).then(result => {
+                createImg(col,result);
+            })
 
-            createImg(col);
-            breaktag(col);
 
             const col1 = document.createElement("div");
             col1.setAttribute("class", "col-6");
 
             row.appendChild(col1);
             overskrift(col1, hold);
-            breaktag(col1);
+
             underOverskrift(col1, hold);
             breaktag(col1);
             ptekst(col1, hold);
             breaktag(col1);
-            breaktag(col1);
+
             breaktag(col1);
             pris(col1, hold);
             ptekstitalic(col1, hold);
@@ -106,10 +114,10 @@ function ptekstitalic(col, hold){
     col.appendChild(tekst);
 }
 
-function createImg(col){
+function createImg(col, val){
     const img = document.createElement("img");
     img.setAttribute("class","holdimage");
-    img.setAttribute("src", "image/Hundetraening2_content.png");
+    img.setAttribute("src", val);
     img.setAttribute("alt", "image");
 
     col.appendChild(img);

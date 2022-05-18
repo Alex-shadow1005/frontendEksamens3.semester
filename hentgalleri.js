@@ -16,12 +16,12 @@ async function loadImages(){
 
     for (let i = 0; i < imageListlength; i++){
         const imageName1 = imageList[i];
-        if((i+3)%3==0){
+        if((i+4)%4==0){
             const row = document.createElement("div");
             row.setAttribute("class","row");
             divContainer.appendChild(row);
             const col = document.createElement("div");
-            col.setAttribute("class", "col-6");
+            col.setAttribute("class", "col-4");
             row.appendChild(col);
             getImage(url + imageName1).then(result => {
                 createImg(col,result);
@@ -29,7 +29,7 @@ async function loadImages(){
         } else {
             const row = document.getElementsByClassName("row").item(document.getElementsByClassName("row").length-1)
             const col = document.createElement("div");
-            col.setAttribute("class", "col-6");
+            col.setAttribute("class", "col-4");
             row.appendChild(col);
             getImage(url + imageName1).then(result => {
                 createImg(col,result);
