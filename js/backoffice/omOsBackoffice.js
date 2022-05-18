@@ -12,22 +12,94 @@ let omOsForm = false;
 const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
+
+//OPRET OM OS
 function createOmOs() {
     setMethod("post");
-    setTitle("Opret Om Os Tekst");
+    setTitle("Opret Om Os");
     setFormDestination("http://localhost:8080/api/omos", "post");
 
     createInput("Overskrift","overskrift", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
-    createInput("Brødtekst",  "brødtekst", "text")
-
+    createInput("Tekst",  "tekst", "text")
 
     setupSubmitButton();
 
     openModal();
 }
 
+//REDIGER OM OS
+function editOmOs(omOs) {
+    alert('hi')
+    setMethod("put");
+    setTitle("Rediger Om Os");
+    setFormDestination("http://localhost:8080/api/omos/" + omOs.omOsId, "put");
 
+    createInput("Overskrift", "overskrift", "text");
+    createInput("Underoverskrift", "underOverskrift", "text");
+    createInput("Tekst", "tekst", "text");
+
+
+    displayOmOs(omOs);
+
+    createDeleteButton("http://localhost:8080/api/omos/" + omOs.omOsId);
+    setupSubmitButton();
+
+    openModal();
+}
+
+
+//LOAD OM OS
+const omOsContainer = document.getElementById("hold-container");
+
+loadOmOs();
+
+async function loadOmOs() {
+    const omOsne = await fetchEntities("http://localhost:8080/api/omos");
+
+    for (let i = 0; i < omOsne.length; i++) {
+        let omOs = omOsne[i];
+        const omOsContainerElement = document.createElement("a");
+
+        const omOsContainerElementId = document.createElement("div");
+        const omOsContainerElementTitle = document.createElement("div");
+
+        omOsContainerElementId.textContent = omOs.omOsId;
+        omOsContainerElementTitle.textContent = omOs.overskrift;
+
+        omOsContainerElement.classList.add("hold-container-element");
+        omOsContainerElementId.classList.add("hold-container-element-id");
+        omOsContainerElementTitle.classList.add("hold-container-element-title");
+
+        //mulighed for at klikke og redigere om os
+        omOsContainerElement.addEventListener("click", () => editOmOs(omOs));
+
+        omOsContainerElement.appendChild(omOsContainerElementId);
+        omOsContainerElement.appendChild(omOsContainerElementTitle);
+
+        omOsContainer.appendChild(omOsContainerElement);
+    }
+}
+
+
+//VIS OM OS
+async function displayOmOs(omOs) {
+    const omOsne = await fetchEntities("http://localhost:8080/api/omos/" + omOs.omOsId);
+    const header = document.createElement("p");
+    header.textContent = "Om Os:";
+    header.style.fontWeight = "bold";
+    form.appendChild(header);
+    omOsne.forEach(s => {
+        const div = document.createElement("div");
+        div.textContent = s.overskrift;
+        form.appendChild(div);
+    });
+}
+
+
+function fetchEntities(url) {
+    return fetch(url).then(response => response.json());
+}
 
 
 //Modal build functions
@@ -62,24 +134,7 @@ function createInput(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
-async function createDropdownInput(url, inputName, idName) {
-    const title = document.createElement("p");
-    const text = document.createTextNode(inputName);
-    title.appendChild(text);
 
-    const entities = await fetchEntities(url);
-    const select = document.createElement("select");
-    select.id = idName;
-    select.name = idName;
-
-    for (let i = 0; i < entities.length; i++) {
-        let entity = entities[i];
-        select.add(new Option(entity.name, entity.id));
-    }
-
-    form.appendChild(title);
-    form.appendChild(select);
-}
 
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
@@ -89,9 +144,7 @@ function setupSubmitButton() {
 }
 
 function createFormEventListener() {
-
     form.addEventListener("submit", handleFormSubmit);
-
 }
 
 async function handleFormSubmit(event) {
@@ -116,11 +169,10 @@ async function postFormDataAsJson(url, formData) {
     if (omOsForm) {
         const omOsId  = document.getElementById("omOs").value;
 
-
         const omOs = {};
-        omOs.id = omOsId;
-        omOs.name = "";
-        omOs.underoverskrift = "";
+        omOs.omOsId = omOsId;
+        omOs.overskrift = "";
+        omOs.underOverskrift = "";
         omOs.tekst = "";
 
 

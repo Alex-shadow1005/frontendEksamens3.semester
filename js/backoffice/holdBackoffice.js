@@ -24,6 +24,7 @@ function createHold() {
     createInput("Brødtekst",  "tekst", "text")
     createInput("Pris",  "pris", "text")
     createInput("Antal kursister",  "antalKursister", "text")
+
     setupSubmitButton();
 
     openModal();
@@ -80,6 +81,8 @@ function fetchEntities(url) {
     return fetch(url).then(response => response.json());
 }
 
+
+//LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
 
 loadHold();
@@ -111,6 +114,7 @@ async function loadHold() {
     }
 }
 
+//VIS HOLD
 async function displayHold(hold) {
     const holdene = await fetchEntities("http://localhost:8080/api/hold" + hold.holdId);
     const header = document.createElement("p");
