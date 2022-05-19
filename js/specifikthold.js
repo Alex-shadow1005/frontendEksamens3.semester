@@ -5,11 +5,6 @@ console.log(id);
 
 const holdContainer = document.getElementById("specifikthold");
 
-function fetchSpecifiktHold(url) {
-    return fetch(url).then(response => response.json());
-}
-
-loadSpecifiktHold();
 async function loadSpecifiktHold() {
     const specifiktHold = await fetchSpecifiktHold("http://localhost:8080/api/hold/" + id);
     console.table(specifiktHold);
@@ -47,6 +42,12 @@ async function loadSpecifiktHold() {
     showHoldKursister.setAttribute("style", "font-style: italic");
     holdContainer.appendChild(showHoldKursister);
 }
+
+function fetchSpecifiktHold(url) {
+    return fetch(url).then(response => response.json());
+}
+
+loadSpecifiktHold();
 
 
 
