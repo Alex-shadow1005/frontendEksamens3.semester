@@ -19,10 +19,10 @@ function createHold() {
 
     createInput("Hold navn","name", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
-<<<<<<< HEAD:js/backoffice/holdBackoffice.js
-    createInput("Brødtekst",  "tekst", "text")
-    createInput("Pris",  "pris", "text")
-    createInput("Antal kursister",  "antalKursister", "text")
+    createInput("Brødtekst",  "tekst", "text");
+    createInput("Pris",  "pris", "text");
+    createInput("Antal kursister",  "antalKursister", "text");
+    createFileUpload("Billede",  "holdImage", "file");
 
     setupSubmitButton();
 
@@ -40,12 +40,7 @@ function editHold(hold) {
     createInput("Tekst", "tekst", "text");
     createInput("Pris", "pris", "text");
     createInput("Antal kursister", "antalKursister", "text");
-=======
-    createInput("Brødtekst",  "tekst", "text");
-    createInput("Pris",  "pris", "text");
-    createInput("Antal kursister",  "antalKursister", "text");
     createFileUpload("Billede",  "holdImage", "file");
->>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
 
     setupSubmitButton();
@@ -53,7 +48,6 @@ function editHold(hold) {
     openModal();
 }
 
-<<<<<<< HEAD:js/backoffice/holdBackoffice.js
 //SLET HOLD
 function deleteEntity(url) {
     const fetchOptions = {
@@ -88,11 +82,7 @@ function fetchEntities(url) {
 
 //LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
-=======
->>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
-
-<<<<<<< HEAD:js/backoffice/holdBackoffice.js
 async function loadHold() {
     const holdene = await fetchEntities("http://localhost:8080/api/hold");
 
@@ -133,8 +123,6 @@ async function displayHold(hold) {
         form.appendChild(div);
     });
 }
-=======
->>>>>>> 71ea2f0115374359d3ff004f30e1ae62cefa744a:holdBackoffice.js
 
 //Modal build functions
 
