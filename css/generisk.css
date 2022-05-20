@@ -80,7 +80,9 @@ footer .container .row{
 .fa-instagram {
     background:#8a3ab9;
 }
-
+.fa-youtube{
+    background: #bb2d3b;
+}
 .social-menu i:hover {
     opacity: 0.8;
 }
