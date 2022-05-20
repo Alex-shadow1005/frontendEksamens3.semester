@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="c6877935-cdf7-4e18-b62f-83ae88932646" name="Changes" comment="arbejder på generisk header">
-      <change afterPath="$PROJECT_DIR$/html/omOsDynamisk.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/omOsDynamisk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/kalender.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/omOs.html" afterDir="false" />
-=======
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_11__Changes_.xml" afterDir="false" />
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="sat billeder ind på om os samt indsat youtube icon">
+      <change afterPath="$PROJECT_DIR$/image/arki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/natasha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/rollo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/tyson.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/holdtest.html" beforeDir="false" afterPath="$PROJECT_DIR$/holdtest.html" afterDir="false" />
->>>>>>> Development
+      <change beforePath="$PROJECT_DIR$/css/omos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/omos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/omOs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +27,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-<<<<<<< HEAD
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-=======
->>>>>>> Development
       </list>
     </option>
   </component>
@@ -143,7 +133,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="css til header" />
@@ -151,6 +140,7 @@
     <MESSAGE value="rettet button" />
     <MESSAGE value="færdig generiks header og footer" />
     <MESSAGE value=" header" />
-    <option name="LAST_COMMIT_MESSAGE" value=" header" />
+    <MESSAGE value="sat billeder ind på om os samt indsat youtube icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="sat billeder ind på om os samt indsat youtube icon" />
   </component>
 </project>
