@@ -109,7 +109,7 @@ function button(col, hold){
     button.addEventListener('click', () => {
         localStorage.setItem("show", JSON.stringify(hold.holdId));
         window.location.href = "specifikthold.html";
-    })
+    });
     col.appendChild(button);
 }
 function pris(col, hold){
