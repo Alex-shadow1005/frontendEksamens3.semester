@@ -12,8 +12,6 @@ let omOsForm = false;
 const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
-
-//OPRET OM OS
 function createOmOs() {
     setMethod("post");
     setTitle("Opret Om Os");
@@ -21,25 +19,22 @@ function createOmOs() {
 
     createInput("Overskrift","overskrift", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
-    createInput("Tekst",  "tekst", "text")
+    createInput("Tekst", "tekst", "text");
 
     setupSubmitButton();
 
     openModal();
 }
 
-//REDIGER OM OS
+//REDIGER EN OM OS
 function editOmOs(omOs) {
-    alert('hi')
     setMethod("put");
     setTitle("Rediger Om Os");
     setFormDestination("http://localhost:8080/api/omos/" + omOs.omOsId, "put");
 
-    createInput("Overskrift", "overskrift", "text");
+    createInput("Overskrift","overskrift", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
     createInput("Tekst", "tekst", "text");
-
-
     displayOmOs(omOs);
 
     createDeleteButton("http://localhost:8080/api/omos/" + omOs.omOsId);
@@ -48,12 +43,42 @@ function editOmOs(omOs) {
     openModal();
 }
 
+//SLET HOLD
+function deleteEntity(url) {
+    const fetchOptions = {
+        method: "delete",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+    return fetch(url, fetchOptions);
+}
 
-//LOAD OM OS
+//SLET ET HOLD KNAP
+function createDeleteButton(url) {
+    const modalFooter = document.querySelector(".modal-footer")
+
+    deleteButton.id = "delete";
+    deleteButton.className = "btn btn-danger remove";
+    deleteButton.textContent = "Slet";
+
+    modalFooter.appendChild(deleteButton);
+
+    deleteButton.addEventListener("click", async () => {
+        await deleteEntity(url);
+        await location.reload();
+    });
+}
+
+function fetchEntities(url) {
+    return fetch(url).then(response => response.json());
+}
+
+
+//LOAD HOLD
 const omOsContainer = document.getElementById("hold-container");
 
 loadOmOs();
-
 async function loadOmOs() {
     const omOsne = await fetchEntities("http://localhost:8080/api/omos");
 
@@ -71,7 +96,7 @@ async function loadOmOs() {
         omOsContainerElementId.classList.add("hold-container-element-id");
         omOsContainerElementTitle.classList.add("hold-container-element-title");
 
-        //mulighed for at klikke og redigere om os
+        //mulighed for at klikke og redigere holdet
         omOsContainerElement.addEventListener("click", () => editOmOs(omOs));
 
         omOsContainerElement.appendChild(omOsContainerElementId);
@@ -81,8 +106,7 @@ async function loadOmOs() {
     }
 }
 
-
-//VIS OM OS
+//VIS HOLD
 async function displayOmOs(omOs) {
     const omOsne = await fetchEntities("http://localhost:8080/api/omos/" + omOs.omOsId);
     const header = document.createElement("p");
@@ -95,12 +119,6 @@ async function displayOmOs(omOs) {
         form.appendChild(div);
     });
 }
-
-
-function fetchEntities(url) {
-    return fetch(url).then(response => response.json());
-}
-
 
 //Modal build functions
 
@@ -134,8 +152,6 @@ function createInput(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
-
-
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
         await createFormEventListener();
@@ -167,7 +183,7 @@ async function postFormDataAsJson(url, formData) {
     let formDataJsonString;
 
     if (omOsForm) {
-        const omOsId  = document.getElementById("omOs").value;
+        const omOsId  = document.getElementById("omos").value;
 
         const omOs = {};
         omOs.omOsId = omOsId;
@@ -200,6 +216,7 @@ async function postFormDataAsJson(url, formData) {
 
     return response.json();
 }
+
 
 
 function openModal() {

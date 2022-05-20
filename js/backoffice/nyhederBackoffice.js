@@ -12,33 +12,29 @@ let nyhederForm = false;
 const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
-
-//OPRET OM OS
 function createNyhed() {
     setMethod("post");
-    setTitle("Opret Nyhed");
+    setTitle("Opret Nyheder");
     setFormDestination("http://localhost:8080/api/nyhed", "post");
 
     createInput("Overskrift","overskrift", "text");
-    createInput("Underoverskrift", "introduktion", "text");
-    createInput("Tekst",  "resterendeTekst", "text")
+    createInput("Introduktion", "introduktion", "text");
+    createInput("Tekst", "resterendeTekst", "text");
 
     setupSubmitButton();
 
     openModal();
 }
 
-//REDIGER OM OS
-function editNyhed(nyhed) {
-    alert('hi')
+//REDIGER EN NYHEd
+function editNyheder(nyhed) {
     setMethod("put");
-    setTitle("Rediger Nyhed");
+    setTitle("Rediger Nyheder");
     setFormDestination("http://localhost:8080/api/nyhed/" + nyhed.nyhedId, "put");
 
-    createInput("Overskrift", "overskrift", "text");
-    createInput("Underoverskrift", "introduktion", "text");
+    createInput("Overskrift","overskrift", "text");
+    createInput("Introduktion", "introduktion", "text");
     createInput("Tekst", "resterendeTekst", "text");
-
 
     displayNyheder(nyhed);
 
@@ -48,41 +44,70 @@ function editNyhed(nyhed) {
     openModal();
 }
 
+//SLET HOLD
+function deleteEntity(url) {
+    const fetchOptions = {
+        method: "delete",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+    return fetch(url, fetchOptions);
+}
 
-//LOAD OM OS
-const nyhedContainer = document.getElementById("hold-container");
+//SLET ET HOLD KNAP
+function createDeleteButton(url) {
+    const modalFooter = document.querySelector(".modal-footer")
 
-loadNyhed();
+    deleteButton.id = "delete";
+    deleteButton.className = "btn btn-danger remove";
+    deleteButton.textContent = "Slet";
 
-async function loadNyhed() {
+    modalFooter.appendChild(deleteButton);
+
+    deleteButton.addEventListener("click", async () => {
+        await deleteEntity(url);
+        await location.reload();
+    });
+}
+
+function fetchEntities(url) {
+    return fetch(url).then(response => response.json());
+}
+
+
+//LOAD HOLD
+const nyhederContainer = document.getElementById("hold-container");
+
+loadNyheder();
+async function loadNyheder() {
     const nyheder = await fetchEntities("http://localhost:8080/api/nyhed");
 
     for (let i = 0; i < nyheder.length; i++) {
         let nyhed = nyheder[i];
-        const nyhedContainerElement = document.createElement("a");
+        const nyhederContainerElement = document.createElement("a");
 
-        const nyhedContainerElementId = document.createElement("div");
-        const nyhedContainerElementTitle = document.createElement("div");
+        const nyhederContainerElementId = document.createElement("div");
+        const nyhederContainerElementTitle = document.createElement("div");
 
-        nyhedContainerElementId.textContent = nyhed.nyhedId;
-        nyhedContainerElementTitle.textContent = nyhed.overskrift;
+        nyhederContainerElementId.textContent = nyhed.nyhedId;
+        nyhederContainerElementTitle.textContent = nyhed.overskrift;
 
-        nyhedContainerElement.classList.add("hold-container-element");
-        nyhedContainerElementId.classList.add("hold-container-element-id");
-        nyhedContainerElementTitle.classList.add("hold-container-element-title");
+        nyhederContainerElement.classList.add("hold-container-element");
+        nyhederContainerElementId.classList.add("hold-container-element-id");
+        nyhederContainerElementTitle.classList.add("hold-container-element-title");
 
-        //mulighed for at klikke og redigere om os
-        nyhedContainerElement.addEventListener("click", () => editNyhed(nyhed));
+        //mulighed for at klikke og redigere holdet
+        nyhederContainerElement.addEventListener("click", () => editNyheder(nyhed));
 
-        nyhedContainerElement.appendChild(nyhedContainerElementId);
-        nyhedContainerElement.appendChild(nyhedContainerElementTitle);
+        nyhederContainerElement.appendChild(nyhederContainerElementId);
+        nyhederContainerElement.appendChild(nyhederContainerElementTitle);
 
-        nyhedContainer.appendChild(nyhedContainerElement);
+        nyhederContainer.appendChild(nyhederContainerElement);
     }
 }
 
-
-//VIS OM OS
+//VIS HOLD
 async function displayNyheder(nyhed) {
     const nyheder = await fetchEntities("http://localhost:8080/api/nyhed/" + nyhed.nyhedId);
     const header = document.createElement("p");
@@ -95,12 +120,6 @@ async function displayNyheder(nyhed) {
         form.appendChild(div);
     });
 }
-
-
-function fetchEntities(url) {
-    return fetch(url).then(response => response.json());
-}
-
 
 //Modal build functions
 
@@ -134,8 +153,6 @@ function createInput(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
-
-
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
         await createFormEventListener();
@@ -167,7 +184,7 @@ async function postFormDataAsJson(url, formData) {
     let formDataJsonString;
 
     if (nyhederForm) {
-        const nyhedId  = document.getElementById("nyhed").value;
+        const nyhedId  = document.getElementById("nyheder").value;
 
         const nyhed = {};
         nyhed.nyhedId = nyhedId;
@@ -200,6 +217,7 @@ async function postFormDataAsJson(url, formData) {
 
     return response.json();
 }
+
 
 
 function openModal() {

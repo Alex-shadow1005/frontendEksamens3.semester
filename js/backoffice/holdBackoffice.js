@@ -15,7 +15,7 @@ const deleteButton = document.createElement("button");
 function createHold() {
     setMethod("post");
     setTitle("Opret hold");
-    setFormDestination("http://localhost:8080/api/hold/upload/image", "post");
+    setFormDestination("http://localhost:8080/api/hold", "post");
 
     createInput("Hold navn","name", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
@@ -23,7 +23,6 @@ function createHold() {
     createInput("Pris",  "pris", "text");
     createInput("Antal kursister",  "antalKursister", "text");
     createFileUpload("Billede",  "holdImage", "file");
-
     setupSubmitButton();
 
     openModal();
@@ -42,7 +41,9 @@ function editHold(hold) {
     createInput("Antal kursister", "antalKursister", "text");
     createFileUpload("Billede",  "holdImage", "file");
 
+    displayHold(hold);
 
+    createDeleteButton("http://localhost:8080/api/hold/" + hold.holdId);
     setupSubmitButton();
 
     openModal();
@@ -83,6 +84,7 @@ function fetchEntities(url) {
 //LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
 
+loadHold();
 async function loadHold() {
     const holdene = await fetchEntities("http://localhost:8080/api/hold");
 
@@ -112,7 +114,7 @@ async function loadHold() {
 
 //VIS HOLD
 async function displayHold(hold) {
-    const holdene = await fetchEntities("http://localhost:8080/api/hold" + hold.holdId);
+    const holdene = await fetchEntities("http://localhost:8080/api/hold/" + hold.holdId);
     const header = document.createElement("p");
     header.textContent = "Hold:";
     header.style.fontWeight = "bold";
@@ -175,27 +177,8 @@ async function createFileUpload(inputName, idName, type, value) {
 
     form.appendChild(title);
     form.appendChild(input);
-
 }
 
-async function createDropdownInput(url, inputName, idName) {
-    const title = document.createElement("p");
-    const text = document.createTextNode(inputName);
-    title.appendChild(text);
-
-    const entities = await fetchEntities(url);
-    const select = document.createElement("select");
-    select.id = idName;
-    select.name = idName;
-
-    for (let i = 0; i < entities.length; i++) {
-        let entity = entities[i];
-        select.add(new Option(entity.name, entity.id));
-    }
-
-    form.appendChild(title);
-    form.appendChild(select);
-}
 
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
@@ -205,9 +188,65 @@ function setupSubmitButton() {
 }
 
 function createFormEventListener() {
-
     form.addEventListener("submit", handleFormSubmit);
+}
 
+async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const formEvent = event.currentTarget;
+    const url = formEvent.action;
+
+    try {
+        const formData = new FormData(formEvent);
+
+        await postFormDataAsJson(url, formData);
+    } catch (err) {
+
+    }
+}
+
+async function postFormDataAsJson(url, formData) {
+    const plainFormData = Object.fromEntries(formData.entries());
+    let formDataJsonString;
+
+    if (omOsForm) {
+        const holdId  = document.getElementById("hold").value;
+        const holdImage = document.getElementById("input");
+
+        const hold = {};
+        hold.holdId = holdId;
+        hold.name = "";
+        hold.underOverskrift = "";
+        hold.tekst = "";
+        hold.antalKursister = "";
+        hold.pris = "";
+        hold.holdImage = holdImage;
+
+
+        formDataJsonString = JSON.stringify(nyhed);
+
+        omOsForm = false;
+    } else {
+        formDataJsonString = JSON.stringify(plainFormData);
+    }
+
+    const fetchOptions = {
+        method: this.method,
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: formDataJsonString
+    };
+
+    const response = await fetch(url, fetchOptions);
+
+    if (!response) {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage);
+    }
+
+    return response.json();
 }
 
 
