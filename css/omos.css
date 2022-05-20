@@ -18,3 +18,8 @@
     padding-bottom: 100px;
     margin-bottom: 0 !important;
 }
+.omos-section img{
+    align-items: center;
+    width: 800px;
+    height: 500px;
+}
