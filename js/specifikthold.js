@@ -1,3 +1,4 @@
+
 const id = localStorage.getItem("show");
 
 console.log(id);
@@ -11,6 +12,7 @@ const getImage = async (url) => {
 
 async function loadSpecifiktHold() {
     const specifiktHold = await fetchSpecifiktHold("http://localhost:8080/api/hold/" + id);
+    console.table(specifiktHold);
 
     //image
     getImage(url + specifiktHold.name).then(result => {
@@ -62,3 +64,8 @@ function fetchSpecifiktHold(url) {
 }
 
 loadSpecifiktHold();
+
+
+
+
+

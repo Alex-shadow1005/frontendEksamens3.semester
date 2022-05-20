@@ -178,25 +178,6 @@ async function createFileUpload(inputName, idName, type, value) {
 
 }
 
-async function createDropdownInput(url, inputName, idName) {
-    const title = document.createElement("p");
-    const text = document.createTextNode(inputName);
-    title.appendChild(text);
-
-    const entities = await fetchEntities(url);
-    const select = document.createElement("select");
-    select.id = idName;
-    select.name = idName;
-
-    for (let i = 0; i < entities.length; i++) {
-        let entity = entities[i];
-        select.add(new Option(entity.name, entity.id));
-    }
-
-    form.appendChild(title);
-    form.appendChild(select);
-}
-
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
         await createFormEventListener();
@@ -205,12 +186,8 @@ function setupSubmitButton() {
 }
 
 function createFormEventListener() {
-
     form.addEventListener("submit", handleFormSubmit);
-
 }
-
-
 
 function openModal() {
     overlay.style.display = "block";
