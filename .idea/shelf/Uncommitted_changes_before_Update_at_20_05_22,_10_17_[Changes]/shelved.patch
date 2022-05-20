@@ -1,0 +1,24 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml	(revision a2fbca3230d26278be77372fb2be8a8997a92019)
++++ /dev/null	(revision a2fbca3230d26278be77372fb2be8a8997a92019)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]" date="1652348942793" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12.05.22, 11:49 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml	(revision a2fbca3230d26278be77372fb2be8a8997a92019)
++++ /dev/null	(revision a2fbca3230d26278be77372fb2be8a8997a92019)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]" date="1652346997002" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12.05.22, 11:16 [Changes]" />
+-</changelist>
+\ No newline at end of file

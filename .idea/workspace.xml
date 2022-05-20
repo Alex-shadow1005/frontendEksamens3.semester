@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="specifikthold WIP">
+<<<<<<< HEAD
+    <list default="true" id="c6877935-cdf7-4e18-b62f-83ae88932646" name="Changes" comment="arbejder på generisk header">
+      <change afterPath="$PROJECT_DIR$/html/omOsDynamisk.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/omOsDynamisk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/holdBackoffice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/kalender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/omOs.html" afterDir="false" />
+=======
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/specifikthold.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specifikthold.html" beforeDir="false" afterPath="$PROJECT_DIR$/specifikthold.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/holdtest.html" beforeDir="false" afterPath="$PROJECT_DIR$/holdtest.html" afterDir="false" />
+>>>>>>> Development
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +32,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+<<<<<<< HEAD
         <option value="HTML File" />
         <option value="JavaScript File" />
+=======
+>>>>>>> Development
       </list>
     </option>
   </component>
@@ -47,9 +61,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backendEksamen3.Semester" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -114,29 +127,11 @@
       <option name="project" value="LOCAL" />
       <updated>1652094185013</updated>
     </task>
-    <task id="LOCAL-00007" summary="specifikthold WIP">
-      <created>1652875723261</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1652875723261</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -156,7 +151,6 @@
     <MESSAGE value="rettet button" />
     <MESSAGE value="færdig generiks header og footer" />
     <MESSAGE value=" header" />
-    <MESSAGE value="specifikthold WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="specifikthold WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value=" header" />
   </component>
 </project>

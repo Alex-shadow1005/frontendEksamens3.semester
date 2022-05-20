@@ -27,11 +27,11 @@ button{
  background-color: #303030;
  color: white;
 }
-#more {
+#more0 {
  display: none;
 }
 
-#moreSec {
+#more1 {
  display: none;
 }
 #moreThird {
@@ -78,7 +78,7 @@ padding-top: 30px;
 
 
 }
-.andenArtikel{
+.artikel{
  margin-bottom: 40px;
  text-align: center;
  display: block;
