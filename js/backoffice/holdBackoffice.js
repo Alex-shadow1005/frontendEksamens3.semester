@@ -31,17 +31,20 @@ function createHold() {
 
 //REDIGER ET HOLD
 function editHold(hold) {
+    console.table(hold);
     setMethod("put");
     setTitle("Rediger hold");
-    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "put");
+    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "PUT");
 
-    createInput("Hold navn", "name", "text");
-    createInput("Underoverskrift", "underOverskrift", "text");
-    createInput("Tekst", "tekst", "text");
-    createInput("Pris", "pris", "text");
-    createInput("Antal kursister", "antalKursister", "text");
+    createEditInput("Hold navn", "name", "text", hold.name);
+    createEditInput("Underoverskrift", "underOverskrift", "text", hold.underOverskrift);
+    createEditInput("Tekst", "tekst", "text", hold.tekst);
+    createEditInput("Pris", "pris", "text", hold.pris);
+    createEditInput("Antal kursister", "antalKursister", "text", hold.antalKursister);
     createFileUpload("Billede",  "holdImage", "file");
 
+
+    displayHold(hold);
 
     setupSubmitButton();
 
@@ -82,7 +85,7 @@ function fetchEntities(url) {
 
 //LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
-
+loadHold();
 async function loadHold() {
     const holdene = await fetchEntities("http://localhost:8080/api/hold");
 
@@ -112,7 +115,7 @@ async function loadHold() {
 
 //VIS HOLD
 async function displayHold(hold) {
-    const holdene = await fetchEntities("http://localhost:8080/api/hold" + hold.holdId);
+    const holdene = await fetchEntities("http://localhost:8080/api/hold/");
     const header = document.createElement("p");
     header.textContent = "Hold:";
     header.style.fontWeight = "bold";
@@ -136,6 +139,26 @@ function setMethod(method) {
 function setFormDestination(action, method) {
     form.setAttribute("action", action);
     form.setAttribute("method", method);
+}
+
+function createEditInput(inputName, idName, type, value, hold) {
+    const title = document.createElement("p");
+    const text = document.createTextNode(inputName);
+    title.appendChild(text);
+
+    const input = document.createElement("input");
+    input.id = idName;
+    input.name = idName;
+    if (value !== undefined) {
+        input.value = value;
+    } else {
+        input.value = hold.idName;
+    }
+    input.classList.add("js-input");
+
+
+    form.appendChild(title);
+    form.appendChild(input);
 }
 
 function createInput(inputName, idName, type, value) {
@@ -178,38 +201,36 @@ async function createFileUpload(inputName, idName, type, value) {
 
 }
 
-async function createDropdownInput(url, inputName, idName) {
-    const title = document.createElement("p");
-    const text = document.createTextNode(inputName);
-    title.appendChild(text);
-
-    const entities = await fetchEntities(url);
-    const select = document.createElement("select");
-    select.id = idName;
-    select.name = idName;
-
-    for (let i = 0; i < entities.length; i++) {
-        let entity = entities[i];
-        select.add(new Option(entity.name, entity.id));
-    }
-
-    form.appendChild(title);
-    form.appendChild(select);
-}
 
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
         await createFormEventListener();
         await location.reload();
+
     });
 }
 
 function createFormEventListener() {
-
+    console.log("lige før submit!");
     form.addEventListener("submit", handleFormSubmit);
 
 }
 
+
+async function handleFormSubmit(event) {
+        event.preventDefault();
+
+    const formEvent = event.currentTarget;
+    const url = formEvent.action;
+
+    try {
+        const formData = new FormData(formEvent);
+        return await fetch(url, {method: "PUT", body: formData});
+
+    } catch (err) {
+        console.log("ERROR ERROR ERROR")
+    }
+}
 
 
 function openModal() {
