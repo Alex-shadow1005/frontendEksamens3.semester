@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment=" footer done, needs colour coordination.">
-      <change afterPath="$PROJECT_DIR$/html/backoffice/galleriBackoffice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/backoffice/galleriBackoffice.js" afterDir="false" />
+
+    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="sat billeder ind på om os samt indsat youtube icon">
+      <change afterPath="$PROJECT_DIR$/image/arki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/natasha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/rollo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/tyson.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/backoffice/holdBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/backoffice/holdBackoffice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/backoffice/nyhederBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/backoffice/nyhederBackoffice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/backoffice/omOsBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/backoffice/omOsBackoffice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/backoffice/tipsogtricksBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/backoffice/tipsogtricksBackoffice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/backoffice/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/backoffice/holdBackoffice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/generisk.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generisk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/omos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/omos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/omOs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-      </list>
+</list>
     </option>
   </component>
   <component name="Git.Merge.Settings">
@@ -52,9 +54,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backendEksamen3.Semester" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -125,17 +126,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -146,7 +136,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="css til header" />
@@ -154,6 +143,7 @@
     <MESSAGE value="rettet button" />
     <MESSAGE value="færdig generiks header og footer" />
     <MESSAGE value=" header" />
-    <option name="LAST_COMMIT_MESSAGE" value=" header" />
+    <MESSAGE value="sat billeder ind på om os samt indsat youtube icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="sat billeder ind på om os samt indsat youtube icon" />
   </component>
 </project>
