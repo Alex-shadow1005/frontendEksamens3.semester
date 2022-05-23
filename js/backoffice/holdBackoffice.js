@@ -21,7 +21,7 @@ function createHold() {
     createInput("Underoverskrift", "underOverskrift", "text");
     createInput("Brødtekst",  "tekst", "text");
     createInput("Pris",  "pris", "text");
-    createInput("Antal kursister",  "antalKursister", "text");
+    createInput("Antal kursister",  "antalKursister", "number");
     createFileUpload("Billede",  "holdImage", "file");
 
     setupSubmitButton();
@@ -40,13 +40,13 @@ function editHold(hold) {
     createEditInput("Underoverskrift", "underOverskrift", "text", hold.underOverskrift);
     createEditInput("Tekst", "tekst", "text", hold.tekst);
     createEditInput("Pris", "pris", "text", hold.pris);
-    createEditInput("Antal kursister", "antalKursister", "text", hold.antalKursister);
+    createEditInput("Antal kursister", "antalKursister", "number", hold.antalKursister);
     createFileUpload("Billede",  "holdImage", "file");
 
 
     displayHold(hold);
 
-    setupSubmitButton();
+    setupEditSubmitButton();
 
     openModal();
 }
@@ -200,6 +200,13 @@ async function createFileUpload(inputName, idName, type, value) {
     form.appendChild(input);
 
 }
+function setupEditSubmitButton() {
+    submitBtn.addEventListener("click", async () => {
+        await createEditFormEventListener();
+        await location.reload();
+
+    });
+}
 
 
 function setupSubmitButton() {
@@ -209,26 +216,50 @@ function setupSubmitButton() {
 
     });
 }
-
 function createFormEventListener() {
-    console.log("lige før submit!");
+
     form.addEventListener("submit", handleFormSubmit);
 
 }
 
 
+function createEditFormEventListener() {
+
+    form.addEventListener("submit", handleFormSubmitEdit);
+
+}
+
 async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const formEvent = event.currentTarget;
+    const url = formEvent.action;
+    console.log(url);
+
+    try {
+        const formData = new FormData(formEvent);
+        return await fetch(url, {method: "POST", body: formData});
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+async function handleFormSubmitEdit(event) {
         event.preventDefault();
 
     const formEvent = event.currentTarget;
     const url = formEvent.action;
+    console.log(url);
 
     try {
         const formData = new FormData(formEvent);
+        console.log(formData);
         return await fetch(url, {method: "PUT", body: formData});
 
     } catch (err) {
         console.log("ERROR ERROR ERROR")
+        console.log(err);
     }
 }
 
