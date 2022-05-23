@@ -8,7 +8,6 @@ const getImage = async (url) => {
 async function loadHold() {
     const holdList = await fetch("http://localhost:8080/api/hold").then(response => response.json());
     const holdListLength = holdList.length;
-
     for (let i = 0; i < holdListLength; i++){
         const hold = holdList[i];
         const row = document.createElement("div");
@@ -25,7 +24,6 @@ async function loadHold() {
             overskrift(col, hold);
 
             underOverskrift(col, hold);
-            breaktag(col);
             ptekst(col, hold);
             button(col, hold);
             breaktag(col);
@@ -64,7 +62,6 @@ async function loadHold() {
             overskrift(col1, hold);
 
             underOverskrift(col1, hold);
-            breaktag(col1);
             ptekst(col1, hold);
             button(col1, hold);
             breaktag(col1);
@@ -89,7 +86,7 @@ function overskrift(col, hold){
 
 }
 function underOverskrift(col, hold){
-    const underoverskrift = document.createElement("h3");
+    const underoverskrift = document.createElement("h4");
     underoverskrift.innerText = hold.underOverskrift;
     col.appendChild(underoverskrift);
 
@@ -103,9 +100,11 @@ function ptekst(col, hold){
     }
     col.appendChild(tekst);
 }
+
 function button(col, hold){
     const button = document.createElement("button");
-    button.innerText = "Læs mere";
+    button.classList.add("readmorebutton");
+    button.innerHTML = "<span>" + "Læs mere" + "</span>";
     button.addEventListener('click', () => {
         localStorage.setItem("show", JSON.stringify(hold.holdId));
         window.location.href = "specifikthold.html";
@@ -113,7 +112,7 @@ function button(col, hold){
     col.appendChild(button);
 }
 function pris(col, hold){
-    const underoverskrift = document.createElement("h3");
+    const underoverskrift = document.createElement("h4");
     underoverskrift.innerText = hold.pris;
     col.appendChild(underoverskrift);
 }

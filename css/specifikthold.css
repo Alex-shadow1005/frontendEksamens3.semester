@@ -1,0 +1,42 @@
+.backButton{
+    background-color: #facd8a;
+    border-radius: 30px;
+    border: transparent;
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.backButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.backButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -18px;
+    transition: 0.5s;
+}
+
+.backButton:hover span {
+    padding-right: 15px;
+}
+
+.backButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.backButton:hover{
+    background: #cacaca;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}

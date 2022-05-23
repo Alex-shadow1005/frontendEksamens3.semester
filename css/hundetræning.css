@@ -9,6 +9,49 @@
     border: 2px solid #facd8a;
 }
 
+.readmorebutton{
+    background-color: #facd8a;
+    border-radius: 30px;
+    border: transparent;
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.readmorebutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.readmorebutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -18px;
+    transition: 0.5s;
+}
+
+.readmorebutton:hover span {
+    padding-right: 15px;
+}
+
+.readmorebutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.readmorebutton:hover{
+    background: #cacaca;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+
 .holdbutton{
     background-color: #facd8a;
     border-radius: 30px;
@@ -69,10 +112,6 @@
     border-radius: 15px;
     border-style: solid;
     text-decoration: none;
-
-
-
-
 }
 .textbox p{
     text-align: center;
@@ -84,9 +123,5 @@
     padding: 95px;
     padding-top: 30px;
     margin: auto;
-    margin-top: 80px;
     font-size: 15px;
-
-
-
 }

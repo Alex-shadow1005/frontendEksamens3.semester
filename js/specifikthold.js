@@ -117,7 +117,7 @@ async function loadSpecifiktHold() {
     const showBackButton = document.createElement("button");
     showBackButton.classList.add("backButton");
     showBackButton.setAttribute("style", "text-align: center");
-    showBackButton.innerText = "Gå tilbage";
+    showBackButton.innerHTML = "<span>" + "Gå tilbage" + "</span>";
     showBackButton.addEventListener('click', () => {
         window.location.href = "holdtest.html";
     });
