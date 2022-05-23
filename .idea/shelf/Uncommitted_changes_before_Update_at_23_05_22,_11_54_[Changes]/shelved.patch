@@ -1,0 +1,108 @@
+Index: html/footer.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- Font awesome -->\n    <script src=\"https://kit.fontawesome.com/a797577768.js\" crossorigin=\"anonymous\"></script>\n    <meta charset=\"UTF-8\">\n    <title>Footer</title>\n    <link rel=\"stylesheet\" href=\"../css/generisk.css\">\n    <link rel=\"stylesheet\" href=\"../css/bootstrap.css\">\n    <link rel=\"stylesheet\" href=\"https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css\">\n</head>\n<footer>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-6 col-xxl-6 col-xl-6 col-sm-12\">\n                <h5>Her kan du følge os på vores sociale medier!</h5>\n                <ul class=\"social-menu\">\n                   <li><a href=\"https://facebook.com/\" target=\"_blank\"><i class=\"fab fa-facebook\"></i></a></li>\n                   <li><a href=\"https://instagram.com/\" target=\"_blank\"><i class=\"fab fa-instagram\"></i></a></li>\n                    <li><a href=\"https://youtube.com/\" target=\"_blank\"><i class=\"fa-brands fa-youtube\"></i></a></li>\n                </ul>\n            </div>\n            <div class=\"col-6 col-xxl-6 col-xl-6 col-sm-12\">\n                <h5>Få fede særtilbud ved at tilmelde dig vores tilbudsbrev her!</h5>\n                <div class=\"row\">\n                    <div class=\"col-md-8 col-12 footerform\">\n                        <input type=\"email\" name=\"email\" class=\"form-control shadow-none\" placeholder=\"Email Address\">\n                    </div>\n                    <div class=\"col-auto\">\n                        <button type=\"submit\" class=\"btn btn-primary footerbutton\">Tilmeld</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</footer>\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/html/footer.html b/html/footer.html
+--- a/html/footer.html	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/html/footer.html	(date 1653299643523)
+@@ -15,7 +15,7 @@
+             <div class="col-6 col-xxl-6 col-xl-6 col-sm-12">
+                 <h5>Her kan du følge os på vores sociale medier!</h5>
+                 <ul class="social-menu">
+-                   <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
++                   <li><a href="https://facebook.com/Hundecentralen-107655821854276" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="https://youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                 </ul>
+Index: css/omos.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*{\n\n    font-family: sans-serif;\n}\n.omos-section{\n    text-align: center;\n    padding-left: 25%;\n    padding-right: 25%;\n    background-color: #303030;\n    color: white;\n\n}\n.omos-section h2{\n    padding-top: 50px;\n    padding-bottom: 100px;\n}\n.omos-section p{\n    padding-bottom: 100px;\n    margin-bottom: 0 !important;\n}\n.præsen{\n    height: 500px;\n    width: 100%;\n}\n.rollo{\n    height: 500px;\n    width: 100%;\n}\n.arki{\n    height: 500px;\n    width: 80%;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/omos.css b/css/omos.css
+--- a/css/omos.css	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/css/omos.css	(date 1653299388337)
+@@ -29,4 +29,7 @@
+ .arki{
+     height: 500px;
+     width: 80%;
++}
++.h4{
++    text-align: center;
+ }
+\ No newline at end of file
+Index: html/omOs.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js\"></script>\n    <script src=\"../js/headerfooter.js\"></script>\n    <link rel=\"stylesheet\" href=\"../css/omos.css\">\n    <link rel=\"stylesheet\" href=\"../css/generisk.css\">\n    <link rel=\"stylesheet\" href=\"../css/bootstrap.css\">\n</head>\n<body>\n<div id=\"header\"></div>\n\n<div class=\"omos-section\">\n    <h2>Om os (Natasha & hundene)</h2>\n\n\n        <img class=\"præsen\" src=\"../image/natasha.png\" alt=\"image\">\n        <br>\n        <br>\n    <p>Mit navn er Natasha Lauritzen.\n        Min store kærlighed for hunde stammer helt tilbage fra barnsben og blev kun stærkere efter jeg fik arbejde som internats medarbejder.\n        I mine 4 år på internatet fik jeg en stor viden og forståelse omkring forskellige hundetyper, temperamenter, racer og tog ofte hvalpe i pleje, som ikke altid havde fået den mest optimale start på livet.\n        Jeg ønskede dog at dygtiggøre mig endnu mere og tilmeldte mig derfor instruktør for familiehunde uddannelsen hos Irene Jarnved, som jeg afsluttede i 2021.\n        Jeg selv er vokset op med labradors, som har været brugt på jagt. Det er her min store interesse for jagthunde er opstået, da jeg nyder at se hundene arbejde og bruge de gener og evner som de er født med. Det er også grunden til at jeg pt. Er i gang med og videre uddanne mig til jagtinstruktør.\n        Når jeg ikke nørder hund eller står på træningspladsen, arbejder jeg som dyrepasser.\n        <br>\n        <br>\n        <br>\n\n    <img class=\"tyson\" src=\"../image/tyson.jpg\" alt=\"image\">\n    <br>\n    <br>\n        Tyson er min rundkørsel på 10 år.\n        Han er en lille hund, med en stor stemme som altid smiler til en om morgenen og putter i sengen om aften.\n        Tyson var min træningsmakker på instruktøruddannelsen og fungere ellers som familiehund, læremester og fotomodel.\n        Da det ikke er til at sige hvilke racer der ligger gemt i Tyson er han utrolig sjov og lærerig at arbejde med, da det aldrig er helt til at forudse hvilke genetiske styrker eller svagheder som udspiller sig.\n        <br>\n        <br>\n        <br>\n\n\n    <br>\n    <br>\n    <img class=\"arki\" src=\"../image/arki.png\" alt=\"image\">\n<br>\n<br>\n        Arki er en labrador, som jeg i sin tid tog med mig hjem fra internatet. Han blev indleveret da han var omkring 6 uger gammel, sammen med sin mor, søskende og 20 andre labradors, som var blevet fjernet grundet vanrøgt.\n        Trods den hårde start på livet er Arki en af de mest kærlige og tillidsfulde hunde jeg har mødt. Han agerer fuldstændig som en lalleglad hundehvalp, trods han snart runder 6 år.\n        Og når nu man (i sit ejet hoved) kun er en forvokset baby, kan det der med koncentrationen under træning godt være lidt svært. Dybt inde er han dog en lab og vil derfor gøre meget for en kiks.\n        <br>\n        <br>\n        <br>\n        <br>\n\n    <img class=\"rollo\" src=\"../image/rollo.png\" alt=\"image\">\n<br>\n<br>\n        (Rollo 2005-2018)\n        Rollo var familiens første jagthund, som altid vil havde en helt særlig plads i mit hjerte.\n        Han var altid en fornøjelse under træningen og på jagt. Han var den type hund som ville gøre alt for sin ejer. Han skulle blot havde vist tingene én gang og så udførte han dem, som om at han aldrig havde lavet andet. Han var den som for alvor vagte interessen for hundetræning og som bandt familien sammen omkring glæden ved at være hundeejer.\n        <br>\n        <br>\n    </p>\n\n</div>\n\n\n\n<div id=\"footer\"></div>\n\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/html/omOs.html b/html/omOs.html
+--- a/html/omOs.html	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/html/omOs.html	(date 1653299388317)
+@@ -57,7 +57,7 @@
+     <img class="rollo" src="../image/rollo.png" alt="image">
+ <br>
+ <br>
+-        (Rollo 2005-2018)
++    <h4>(Rollo 2005-2018)</h4>
+         Rollo var familiens første jagthund, som altid vil havde en helt særlig plads i mit hjerte.
+         Han var altid en fornøjelse under træningen og på jagt. Han var den type hund som ville gøre alt for sin ejer. Han skulle blot havde vist tingene én gang og så udførte han dem, som om at han aldrig havde lavet andet. Han var den som for alvor vagte interessen for hundetræning og som bandt familien sammen omkring glæden ved at være hundeejer.
+         <br>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/specifikthold.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_49_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]1/shelved.patch\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/specifikthold.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022__10_42__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22,_15_11_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22__15_11__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_53_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/hentHold.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/hentHold.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"HTML File\" />\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"origin/Development\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../Frontend\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/image\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n      <workItem from=\"1651849312436\" duration=\"3353000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\n      <created>1651579826498</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651579826498</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"arbejder på generisk header\">\n      <created>1651652127850</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652127850</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"arbejder på generisk header\">\n      <created>1651652165372</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652165372</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"rettet button\">\n      <created>1651826356397</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651826356397</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"færdig generiks header og footer\">\n      <created>1651840376414</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651840376414</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\" header\">\n      <created>1652094185012</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1652094185013</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.History.Properties\">\n    <option name=\"COLUMN_ID_ORDER\">\n      <list>\n        <option value=\"Default.Root\" />\n        <option value=\"Default.Author\" />\n        <option value=\"Default.Date\" />\n        <option value=\"Default.Subject\" />\n        <option value=\"Space.CommitStatus\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"css til header\" />\n    <MESSAGE value=\"arbejder på generisk header\" />\n    <MESSAGE value=\"rettet button\" />\n    <MESSAGE value=\"færdig generiks header og footer\" />\n    <MESSAGE value=\" header\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\" header\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/.idea/workspace.xml	(date 1653299644539)
+@@ -5,20 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/specifikthold.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_49_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]1/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022__10_42__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22,_15_11_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22__15_11__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_53_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/hentHold.js" beforeDir="false" afterPath="$PROJECT_DIR$/hentHold.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/css/omos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/omos.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/html/omOs.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/omOs.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -43,7 +32,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Emma" />
++        <entry key="$PROJECT_DIR$" value="Mads" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -152,7 +141,6 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="css til header" />
