@@ -53,21 +53,16 @@
 }
 
 .holdbutton{
+    padding: 20px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-size: 28px;
     background-color: #facd8a;
     border-radius: 30px;
-    border: 4px solid #facd8a;
-    font-size: 20px;
-    display: inline;
-    padding: 20px;
-    transition: all 0.2s ease-in-out;
-    margin-bottom: 80px;
-    margin-top: 70px;
+    border: transparent;
     display: inline-block;
-    border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
-    padding: 20px;
     transition: all 0.5s;
     cursor: pointer;
 

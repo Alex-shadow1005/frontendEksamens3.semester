@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/specifikthold.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22__10_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22__10_27__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_14_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_14_54__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__12_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__12_20__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/hundetræning.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/hundetræning.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/holdtest.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/holdtest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/hundetræning.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hundetræning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/specifikthold.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/specifikthold.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/hentHold.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/hentHold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/specifikthold.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652094185013</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="button fix on hold">
+      <created>1653304334732</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653304334732</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +148,7 @@
     <MESSAGE value="færdig generiks header og footer" />
     <MESSAGE value=" header" />
     <MESSAGE value="sat billeder ind på om os samt indsat youtube icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="sat billeder ind på om os samt indsat youtube icon" />
+    <MESSAGE value="button fix on hold" />
+    <option name="LAST_COMMIT_MESSAGE" value="button fix on hold" />
   </component>
 </project>
