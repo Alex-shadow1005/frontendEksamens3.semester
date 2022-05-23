@@ -8,38 +8,36 @@ let modalInputField = document.querySelector(".modal-input-field");
 let form = document.querySelector(".modal-input-field");
 
 let method;
-let holdForm = false;
+let galleriForm = false;
 const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
-function createHold() {
+function createGalleri() {
     setMethod("post");
-    setTitle("Opret hold");
-    setFormDestination("http://localhost:8080/api/hold", "post");
+    setTitle("Upload billede");
+    setFormDestination("http://localhost:8080/api/galleri/upload/image", "post");
 
-    createInput("Hold navn","name", "text");
-    createInput("Underoverskrift", "underOverskrift", "text");
-    createInput("Brødtekst",  "tekst", "text");
-    createInput("Pris",  "pris", "text");
-    createInput("Antal kursister",  "antalKursister", "number");
-   // createFileUpload("Billede",  "holdImage", "file");
+    createInput("Navn","name", "text");
+    createInput("Type", "type", "text");
+    createFileUpload("Billede","image", "file");
+
     setupSubmitButton();
 
     openModal();
 }
 
-//REDIGER ET HOLD
-function editHold(hold) {
-    setMethod("put");
-    setTitle("Rediger hold");
-    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "put");
+//REDIGER ET BI
+function deleteGalleri(galleri) {
+    setMethod("delete");
+    setTitle("Slet hold");
+    setFormDestination("http://localhost:8080/api/galleri/delete/" + galleri.galleriId, "delete");
 
     createInput("Hold navn", "name", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
     createInput("Tekst", "tekst", "text");
     createInput("Pris", "pris", "text");
-    createInput("Antal kursister", "antalKursister", "number");
-    //createFileUpload("Billede",  "holdImage", "file");
+    createInput("Antal kursister", "antalKursister", "text");
+    createFileUpload("Billede",  "holdImage", "file");
 
     displayHold(hold);
 
@@ -82,44 +80,66 @@ function fetchEntities(url) {
 
 
 //LOAD HOLD
-const holdContainer = document.getElementById("hold-container");
+const galleriContainer = document.getElementById("hold-container");
 
-loadHold();
-async function loadHold() {
-    const holdene = await fetchEntities("http://localhost:8080/api/hold");
+loadGalleri();
+async function loadGalleri() {
+    const galleribilleder = await fetchEntities("http://localhost:8080/api/galleri");
 
-    for (let i = 0; i < holdene.length; i++) {
-        let hold = holdene[i];
-        const holdContainerElement = document.createElement("a");
+    for (let i = 0; i < galleribilleder.length; i++) {
+        let galleri = galleribilleder[i];
+        const galleriContainerElement = document.createElement("a");
 
-        const holdContainerElementId = document.createElement("div");
-        const holdContainerElementTitle = document.createElement("div");
+        const galleriContainerElementId = document.createElement("div");
+        const galleriContainerElementTitle = document.createElement("div");
 
-        holdContainerElementId.textContent = hold.holdId;
-        holdContainerElementTitle.textContent = hold.name;
-        
-        holdContainerElement.classList.add("hold-container-element");
-        holdContainerElementId.classList.add("hold-container-element-id");
-        holdContainerElementTitle.classList.add("hold-container-element-title");
+        galleriContainerElementId.textContent = galleri.galleriId;
+        galleriContainerElementTitle.textContent = galleri.name;
+
+        galleriContainerElement.classList.add("hold-container-element");
+        galleriContainerElementId.classList.add("hold-container-element-id");
+        galleriContainerElementTitle.classList.add("hold-container-element-title");
 
         //mulighed for at klikke og redigere holdet
-        holdContainerElement.addEventListener("click", () => editHold(hold));
+        galleriContainerElement.addEventListener("click", () => deleteGalleri(galleri));
 
-        holdContainerElement.appendChild(holdContainerElementId);
-        holdContainerElement.appendChild(holdContainerElementTitle);
+        galleriContainerElement.appendChild(galleriContainerElementId);
+        galleriContainerElement.appendChild(galleriContainerElementTitle);
 
-        holdContainer.appendChild(holdContainerElement);
+        galleriContainer.appendChild(galleriContainerElement);
     }
 }
 
+
+async function createFileUpload(inputName, idName, type, value) {
+    const title = document.createElement("p");
+    const text = document.createTextNode(inputName);
+    title.appendChild(text);
+
+    const input = document.createElement("input");
+    input.id = idName;
+    input.name = idName;
+    input.type = type;
+
+
+    if (value !== undefined) {
+        input.value = value;
+    }
+    input.classList.add("js-input");
+
+
+    form.appendChild(title);
+    form.appendChild(input);
+}
+
 //VIS HOLD
-async function displayHold(hold) {
-    const holdene = await fetchEntities("http://localhost:8080/api/hold/" + hold.holdId);
+async function displayGalleri(galleri) {
+    const galleribilleder = await fetchEntities("http://localhost:8080/api/galleri/" + galleri.galleriId);
     const header = document.createElement("p");
-    header.textContent = "Hold:";
+    header.textContent = "Galleri:";
     header.style.fontWeight = "bold";
     form.appendChild(header);
-    holdene.forEach(s => {
+    galleribilleder.forEach(s => {
         const div = document.createElement("div");
         div.textContent = s.name;
         form.appendChild(div);
@@ -158,28 +178,6 @@ function createInput(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
-async function createFileUpload(inputName, idName, type, value) {
-    const title = document.createElement("p");
-    const text = document.createTextNode(inputName);
-    title.appendChild(text);
-
-    const input = document.createElement("input");
-    input.id = idName;
-    input.name = idName;
-    input.type = type;
-
-
-    if (value !== undefined) {
-        input.value = value;
-    }
-    input.classList.add("js-input");
-
-
-    form.appendChild(title);
-    form.appendChild(input);
-}
-
-
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
         await createFormEventListener();
@@ -210,23 +208,20 @@ async function postFormDataAsJson(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries());
     let formDataJsonString;
 
-    if (omOsForm) {
-        const holdId  = document.getElementById("hold").value;
-        const holdImage = document.getElementById("input");
+    if (galleriForm) {
+        const galleriId  = document.getElementById("galleri").value;
+        const image = document.getElementById("input");
 
-        const hold = {};
-        hold.holdId = holdId;
-        hold.name = "";
-        hold.underOverskrift = "";
-        hold.tekst = "";
-        hold.pris = "";
-        hold.antalKursister = "";
-        //hold.holdImage = holdImage;
+        const galleri = {};
+        galleri.galleriId = galleriId;
+        galleri.name = "";
+        galleri.type = "";
+        galleri.image = image;
 
 
-        formDataJsonString = JSON.stringify(hold);
+        formDataJsonString = JSON.stringify(galleri);
 
-        omOsForm = false;
+        galleriForm = false;
     } else {
         formDataJsonString = JSON.stringify(plainFormData);
     }
