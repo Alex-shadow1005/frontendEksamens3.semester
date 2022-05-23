@@ -1,0 +1,139 @@
+Index: js/backoffice/holdBackoffice.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const overlay = document.querySelector(\"#overlay\");\n\ndocument.querySelector(\".close\").addEventListener(\"click\", closeModal);\n\nlet modalTitle = document.querySelector(\".modal-title\");\nlet modalInputField = document.querySelector(\".modal-input-field\");\n\nlet form = document.querySelector(\".modal-input-field\");\n\nlet method;\nlet holdForm = false;\nconst submitBtn = document.getElementById(\"submit\");\nconst deleteButton = document.createElement(\"button\");\n\nfunction createHold() {\n    setMethod(\"post\");\n    setTitle(\"Opret hold\");\n    setFormDestination(\"http://localhost:8080/api/hold\", \"post\");\n\n    createInput(\"Hold navn\",\"name\", \"text\");\n    createInput(\"Underoverskrift\", \"underOverskrift\", \"text\");\n    createInput(\"Brødtekst\",  \"tekst\", \"text\");\n    createInput(\"Pris\",  \"pris\", \"text\");\n    createInput(\"Antal kursister\",  \"antalKursister\", \"text\");\n    createFileUpload(\"Billede\",  \"holdImage\", \"file\");\n    setupSubmitButton();\n\n    openModal();\n}\n\n//REDIGER ET HOLD\nfunction editHold(hold) {\n    setMethod(\"put\");\n    setTitle(\"Rediger hold\");\n    setFormDestination(\"http://localhost:8080/api/hold/\" + hold.holdId, \"put\");\n\n    createInput(\"Hold navn\", \"name\", \"text\");\n    createInput(\"Underoverskrift\", \"underOverskrift\", \"text\");\n    createInput(\"Tekst\", \"tekst\", \"text\");\n    createInput(\"Pris\", \"pris\", \"text\");\n    createInput(\"Antal kursister\", \"antalKursister\", \"text\");\n    createFileUpload(\"Billede\",  \"holdImage\", \"file\");\n\n    displayHold(hold);\n\n    createDeleteButton(\"http://localhost:8080/api/hold/\" + hold.holdId);\n    setupSubmitButton();\n\n    openModal();\n}\n\n//SLET HOLD\nfunction deleteEntity(url) {\n    const fetchOptions = {\n        method: \"delete\",\n        headers: {\n            \"Content-Type\": \"application/json\",\n        },\n    };\n    return fetch(url, fetchOptions);\n}\n\n//SLET ET HOLD KNAP\nfunction createDeleteButton(url) {\n    const modalFooter = document.querySelector(\".modal-footer\")\n\n    deleteButton.id = \"delete\";\n    deleteButton.className = \"btn btn-danger remove\";\n    deleteButton.textContent = \"Slet\";\n\n    modalFooter.appendChild(deleteButton);\n\n    deleteButton.addEventListener(\"click\", async () => {\n        await deleteEntity(url);\n        await location.reload();\n    });\n}\n\nfunction fetchEntities(url) {\n    return fetch(url).then(response => response.json());\n}\n\n\n//LOAD HOLD\nconst holdContainer = document.getElementById(\"hold-container\");\n\nloadHold();\nasync function loadHold() {\n    const holdene = await fetchEntities(\"http://localhost:8080/api/hold\");\n\n    for (let i = 0; i < holdene.length; i++) {\n        let hold = holdene[i];\n        const holdContainerElement = document.createElement(\"a\");\n\n        const holdContainerElementId = document.createElement(\"div\");\n        const holdContainerElementTitle = document.createElement(\"div\");\n\n        holdContainerElementId.textContent = hold.holdId;\n        holdContainerElementTitle.textContent = hold.name;\n        \n        holdContainerElement.classList.add(\"hold-container-element\");\n        holdContainerElementId.classList.add(\"hold-container-element-id\");\n        holdContainerElementTitle.classList.add(\"hold-container-element-title\");\n\n        //mulighed for at klikke og redigere holdet\n        holdContainerElement.addEventListener(\"click\", () => editHold(hold));\n\n        holdContainerElement.appendChild(holdContainerElementId);\n        holdContainerElement.appendChild(holdContainerElementTitle);\n\n        holdContainer.appendChild(holdContainerElement);\n    }\n}\n\n//VIS HOLD\nasync function displayHold(hold) {\n    const holdene = await fetchEntities(\"http://localhost:8080/api/hold/\" + hold.holdId);\n    const header = document.createElement(\"p\");\n    header.textContent = \"Hold:\";\n    header.style.fontWeight = \"bold\";\n    form.appendChild(header);\n    holdene.forEach(s => {\n        const div = document.createElement(\"div\");\n        div.textContent = s.name;\n        form.appendChild(div);\n    });\n}\n\n//Modal build functions\n\nfunction setTitle(title) {\n    modalTitle.textContent = title;\n}\nfunction setMethod(method) {\n    this.method = method;\n}\n\nfunction setFormDestination(action, method) {\n    form.setAttribute(\"action\", action);\n    form.setAttribute(\"method\", method);\n}\n\nfunction createInput(inputName, idName, type, value) {\n    const title = document.createElement(\"p\");\n    const text = document.createTextNode(inputName);\n    title.appendChild(text);\n\n    const input = document.createElement(\"input\");\n    input.id = idName;\n    input.name = idName;\n    if (value !== undefined) {\n        input.value = value;\n    }\n    input.classList.add(\"js-input\");\n\n\n    form.appendChild(title);\n    form.appendChild(input);\n}\n\nasync function createFileUpload(inputName, idName, type, value) {\n    const title = document.createElement(\"p\");\n    const text = document.createTextNode(inputName);\n    title.appendChild(text);\n\n    const input = document.createElement(\"input\");\n    input.id = idName;\n    input.name = idName;\n    input.type = type;\n\n\n    if (value !== undefined) {\n        input.value = value;\n    }\n    input.classList.add(\"js-input\");\n\n\n    form.appendChild(title);\n    form.appendChild(input);\n}\n\n\nfunction setupSubmitButton() {\n    submitBtn.addEventListener(\"click\", async () => {\n        await createFormEventListener();\n        await location.reload();\n    });\n}\n\nfunction createFormEventListener() {\n    form.addEventListener(\"submit\", handleFormSubmit);\n}\n\nasync function handleFormSubmit(event) {\n    event.preventDefault();\n\n    const formEvent = event.currentTarget;\n    const url = formEvent.action;\n\n    try {\n        const formData = new FormData(formEvent);\n\n        await postFormDataAsJson(url, formData);\n    } catch (err) {\n\n    }\n}\n\nasync function postFormDataAsJson(url, formData) {\n    const plainFormData = Object.fromEntries(formData.entries());\n    let formDataJsonString;\n\n    if (omOsForm) {\n        const holdId  = document.getElementById(\"hold\").value;\n        const holdImage = document.getElementById(\"input\");\n\n        const hold = {};\n        hold.holdId = holdId;\n        hold.name = \"\";\n        hold.underOverskrift = \"\";\n        hold.tekst = \"\";\n        hold.antalKursister = \"\";\n        hold.pris = \"\";\n        hold.holdImage = holdImage;\n\n\n        formDataJsonString = JSON.stringify(nyhed);\n\n        omOsForm = false;\n    } else {\n        formDataJsonString = JSON.stringify(plainFormData);\n    }\n\n    const fetchOptions = {\n        method: this.method,\n        headers: {\n            \"Content-Type\": \"application/json\",\n        },\n        body: formDataJsonString\n    };\n\n    const response = await fetch(url, fetchOptions);\n\n    if (!response) {\n        const errorMessage = await response.text();\n        throw new Error(errorMessage);\n    }\n\n    return response.json();\n}\n\n\n\nfunction openModal() {\n    overlay.style.display = \"block\";\n}\n\nfunction closeModal() {\n    overlay.style.display = \"none\";\n    clearModal();\n}\n\nfunction clearModal() {\n    modalTitle.textContent = \"\";\n    deleteButton.remove();\n\n    form.reset();\n\n    while (modalInputField.hasChildNodes()) {\n        modalInputField.removeChild(modalInputField.firstChild);\n    }\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/backoffice/holdBackoffice.js b/js/backoffice/holdBackoffice.js
+--- a/js/backoffice/holdBackoffice.js	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/js/backoffice/holdBackoffice.js	(date 1653046127913)
+@@ -25,7 +25,9 @@
+     createFileUpload("Billede",  "holdImage", "file");
+     setupSubmitButton();
+ 
++
+     openModal();
++    console.table(hold);
+ }
+ 
+ //REDIGER ET HOLD
+@@ -224,7 +226,7 @@
+         hold.holdImage = holdImage;
+ 
+ 
+-        formDataJsonString = JSON.stringify(nyhed);
++        formDataJsonString = JSON.stringify(hold);
+ 
+         omOsForm = false;
+     } else {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/specifikthold.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_49_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]1/shelved.patch\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/specifikthold.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022__10_42__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22,_15_11_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22__15_11__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_53_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/hentHold.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/hentHold.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"HTML File\" />\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"origin/Development\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Emma\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"28WTirTAb6qaK9AI3WgPRqMRIBz\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../Frontend\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/image\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"59952a0e-ce59-4da5-89fd-9bf09365af4d\" name=\"Changes\" comment=\"\" />\n      <created>1651331471949</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1651331471949</updated>\n      <workItem from=\"1651849312436\" duration=\"3353000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"css til header\">\n      <created>1651579826498</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651579826498</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"arbejder på generisk header\">\n      <created>1651652127850</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652127850</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"arbejder på generisk header\">\n      <created>1651652165372</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651652165372</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"rettet button\">\n      <created>1651826356397</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651826356397</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"færdig generiks header og footer\">\n      <created>1651840376414</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651840376414</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\" header\">\n      <created>1652094185012</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1652094185013</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.History.Properties\">\n    <option name=\"COLUMN_ID_ORDER\">\n      <list>\n        <option value=\"Default.Root\" />\n        <option value=\"Default.Author\" />\n        <option value=\"Default.Date\" />\n        <option value=\"Default.Subject\" />\n        <option value=\"Space.CommitStatus\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"css til header\" />\n    <MESSAGE value=\"arbejder på generisk header\" />\n    <MESSAGE value=\"rettet button\" />\n    <MESSAGE value=\"færdig generiks header og footer\" />\n    <MESSAGE value=\" header\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\" header\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8d64036ca83a72d5633c716451ea0a62b0a65c0e)
++++ b/.idea/workspace.xml	(date 1653293652756)
+@@ -4,21 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/specifikthold.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-05-2022_13_49_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022,_10_42_[Changes]1/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022__10_42__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22,_15_11_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_22__15_11__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_16_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_49_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22,_11_53_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_16__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_22__11_49__Changes_.xml" beforeDir="false" />
++    <list default="true" id="59952a0e-ce59-4da5-89fd-9bf09365af4d" name="Changes" comment="sat billeder ind på om os samt indsat youtube icon">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/hentHold.js" beforeDir="false" afterPath="$PROJECT_DIR$/hentHold.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/js/backoffice/holdBackoffice.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/backoffice/holdBackoffice.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -32,8 +20,6 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="CSS File" />
+-        <option value="HTML File" />
+-        <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+@@ -57,17 +43,11 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+-    <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Frontend" />
+-    <property name="list.type.of.created.stylesheet" value="CSS" />
+-    <property name="node.js.detected.package.eslint" value="true" />
+-    <property name="node.js.detected.package.tslint" value="true" />
+-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+-  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "WebServerToolWindowFactoryState": "false"
++  }
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/image" />
+@@ -82,6 +62,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1651331471949</updated>
+       <workItem from="1651849312436" duration="3353000" />
++      <workItem from="1653293324815" duration="327000" />
+     </task>
+     <task id="LOCAL-00001" summary="css til header">
+       <created>1651579826498</created>
+@@ -131,17 +112,6 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+-  <component name="Vcs.Log.History.Properties">
+-    <option name="COLUMN_ID_ORDER">
+-      <list>
+-        <option value="Default.Root" />
+-        <option value="Default.Author" />
+-        <option value="Default.Date" />
+-        <option value="Default.Subject" />
+-        <option value="Space.CommitStatus" />
+-      </list>
+-    </option>
+-  </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+@@ -152,7 +122,6 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="css til header" />
+@@ -160,6 +129,7 @@
+     <MESSAGE value="rettet button" />
+     <MESSAGE value="færdig generiks header og footer" />
+     <MESSAGE value=" header" />
+-    <option name="LAST_COMMIT_MESSAGE" value=" header" />
++    <MESSAGE value="sat billeder ind på om os samt indsat youtube icon" />
++    <option name="LAST_COMMIT_MESSAGE" value="sat billeder ind på om os samt indsat youtube icon" />
+   </component>
+ </project>
+\ No newline at end of file
