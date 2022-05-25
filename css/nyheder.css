@@ -132,7 +132,7 @@ p{
 
 /* DYNAMIC NYHEDER */
 
-.artikel{
+.artikel {
  margin-bottom: 40px;
  text-align: center;
  display: block;
@@ -146,3 +146,4 @@ p{
  box-sizing: border-box;
  margin-left: 130px;
  margin-right: 120px;
+}
