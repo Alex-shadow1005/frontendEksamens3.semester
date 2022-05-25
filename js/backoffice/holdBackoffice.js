@@ -6,6 +6,7 @@ let modalTitle = document.querySelector(".modal-title");
 let modalInputField = document.querySelector(".modal-input-field");
 
 let form = document.querySelector(".modal-input-field");
+let modalForm = document.getElementById("modalForm");
 
 let method;
 let holdForm = false;
@@ -13,38 +14,42 @@ const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
 function createHold() {
+    clearModal();
     setMethod("post");
     setTitle("Opret hold");
-    setFormDestination("http://localhost:8080/api/hold", "post");
+    setFormDestination("http://localhost:8080/api/hold/upload/image", "post");
 
     createInput("Hold navn","name", "text");
     createInput("Underoverskrift", "underOverskrift", "text");
     createInput("Brødtekst",  "tekst", "text");
     createInput("Pris",  "pris", "text");
     createInput("Antal kursister",  "antalKursister", "number");
-   // createFileUpload("Billede",  "holdImage", "file");
+    createFileUpload("Billede",  "holdImage", "file");
+
     setupSubmitButton();
 
     openModal();
+
 }
 
 //REDIGER ET HOLD
 function editHold(hold) {
+    clearModal();
+    console.table(hold.name);
     setMethod("put");
     setTitle("Rediger hold");
-    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "put");
+    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "post");
 
-    createInput("Hold navn", "name", "text");
-    createInput("Underoverskrift", "underOverskrift", "text");
-    createInput("Tekst", "tekst", "text");
-    createInput("Pris", "pris", "text");
-    createInput("Antal kursister", "antalKursister", "number");
-    //createFileUpload("Billede",  "holdImage", "file");
+    createEditInput("Hold navn", "name", "text", hold.name);
+    createEditInput("Underoverskrift", "underOverskrift", "text", hold.underOverskrift);
+    createEditInput("Tekst", "tekst", "text", hold.tekst);
+    createEditInput("Pris", "pris", "text", hold.pris);
+    createEditInput("Antal kursister", "antalKursister", "number", hold.antalKursister);
+    createFileUpload("Billede",  "holdImage", "file");
 
-    displayHold(hold);
 
-    createDeleteButton("http://localhost:8080/api/hold/" + hold.holdId);
-    setupSubmitButton();
+
+    setupEditSubmitButton();
 
     openModal();
 }
@@ -83,7 +88,6 @@ function fetchEntities(url) {
 
 //LOAD HOLD
 const holdContainer = document.getElementById("hold-container");
-
 loadHold();
 async function loadHold() {
     const holdene = await fetchEntities("http://localhost:8080/api/hold");
@@ -114,7 +118,7 @@ async function loadHold() {
 
 //VIS HOLD
 async function displayHold(hold) {
-    const holdene = await fetchEntities("http://localhost:8080/api/hold/" + hold.holdId);
+    const holdene = await fetchEntities("http://localhost:8080/api/hold/");
     const header = document.createElement("p");
     header.textContent = "Hold:";
     header.style.fontWeight = "bold";
@@ -135,9 +139,36 @@ function setMethod(method) {
     this.method = method;
 }
 
+function afterSubmit(){
+    window.location.href="../../html/backoffice/holdBackoffice.html";
+}
+
 function setFormDestination(action, method) {
     form.setAttribute("action", action);
     form.setAttribute("method", method);
+    form.setAttribute("target", "dummyframe");
+
+
+}
+
+function createEditInput(inputName, idName, type, value, hold) {
+    const title = document.createElement("p");
+    const text = document.createTextNode(inputName);
+    title.appendChild(text);
+
+    const input = document.createElement("input");
+    input.id = idName;
+    input.name = idName;
+    if (value !== undefined) {
+        input.value = value;
+    } else {
+        input.value = hold.idName;
+    }
+    input.classList.add("js-input");
+
+
+    form.appendChild(title);
+    form.appendChild(input);
 }
 
 function createInput(inputName, idName, type, value) {
@@ -167,6 +198,7 @@ async function createFileUpload(inputName, idName, type, value) {
     input.id = idName;
     input.name = idName;
     input.type = type;
+    input.accept = "image/png, image/jpeg";
 
 
     if (value !== undefined) {
@@ -179,76 +211,17 @@ async function createFileUpload(inputName, idName, type, value) {
     form.appendChild(input);
 }
 
-
-function setupSubmitButton() {
+function setupEditSubmitButton() {
     submitBtn.addEventListener("click", async () => {
-        await createFormEventListener();
-        await location.reload();
+       closeModal();
     });
 }
 
-function createFormEventListener() {
-    form.addEventListener("submit", handleFormSubmit);
+function setupSubmitButton() {
+    submitBtn.addEventListener("click", async () => {
+       closeModal();
+    });
 }
-
-async function handleFormSubmit(event) {
-    event.preventDefault();
-
-    const formEvent = event.currentTarget;
-    const url = formEvent.action;
-
-    try {
-        const formData = new FormData(formEvent);
-
-        await postFormDataAsJson(url, formData);
-    } catch (err) {
-
-    }
-}
-
-async function postFormDataAsJson(url, formData) {
-    const plainFormData = Object.fromEntries(formData.entries());
-    let formDataJsonString;
-
-    if (omOsForm) {
-        const holdId  = document.getElementById("hold").value;
-        const holdImage = document.getElementById("input");
-
-        const hold = {};
-        hold.holdId = holdId;
-        hold.name = "";
-        hold.underOverskrift = "";
-        hold.tekst = "";
-        hold.pris = "";
-        hold.antalKursister = "";
-        //hold.holdImage = holdImage;
-
-
-        formDataJsonString = JSON.stringify(hold);
-
-        omOsForm = false;
-    } else {
-        formDataJsonString = JSON.stringify(plainFormData);
-    }
-
-    const fetchOptions = {
-        method: this.method,
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: formDataJsonString
-    };
-
-    const response = await fetch(url, fetchOptions);
-
-    if (!response) {
-        const errorMessage = await response.text();
-        throw new Error(errorMessage);
-    }
-
-    return response.json();
-}
-
 
 
 function openModal() {
@@ -257,7 +230,7 @@ function openModal() {
 
 function closeModal() {
     overlay.style.display = "none";
-    clearModal();
+    ///clearModal();
 }
 
 function clearModal() {
