@@ -6,6 +6,7 @@ let modalTitle = document.querySelector(".modal-title");
 let modalInputField = document.querySelector(".modal-input-field");
 
 let form = document.querySelector(".modal-input-field");
+let modalForm = document.getElementById("modalForm");
 
 let method;
 let holdForm = false;
@@ -13,6 +14,7 @@ const submitBtn = document.getElementById("submit");
 const deleteButton = document.createElement("button");
 
 function createHold() {
+    clearModal();
     setMethod("post");
     setTitle("Opret hold");
     setFormDestination("http://localhost:8080/api/hold/upload/image", "post");
@@ -27,14 +29,16 @@ function createHold() {
     setupSubmitButton();
 
     openModal();
+
 }
 
 //REDIGER ET HOLD
 function editHold(hold) {
-    console.table(hold);
+    clearModal();
+    console.table(hold.name);
     setMethod("put");
     setTitle("Rediger hold");
-    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "PUT");
+    setFormDestination("http://localhost:8080/api/hold/" + hold.holdId, "post");
 
     createEditInput("Hold navn", "name", "text", hold.name);
     createEditInput("Underoverskrift", "underOverskrift", "text", hold.underOverskrift);
@@ -44,7 +48,6 @@ function editHold(hold) {
     createFileUpload("Billede",  "holdImage", "file");
 
 
-    displayHold(hold);
 
     setupEditSubmitButton();
 
@@ -136,9 +139,16 @@ function setMethod(method) {
     this.method = method;
 }
 
+function afterSubmit(){
+    window.location.href="../../html/backoffice/holdBackoffice.html";
+}
+
 function setFormDestination(action, method) {
     form.setAttribute("action", action);
     form.setAttribute("method", method);
+    form.setAttribute("target", "dummyframe");
+
+
 }
 
 function createEditInput(inputName, idName, type, value, hold) {
@@ -188,6 +198,7 @@ async function createFileUpload(inputName, idName, type, value) {
     input.id = idName;
     input.name = idName;
     input.type = type;
+    input.accept = "image/png, image/jpeg";
 
 
     if (value !== undefined) {
@@ -198,69 +209,18 @@ async function createFileUpload(inputName, idName, type, value) {
 
     form.appendChild(title);
     form.appendChild(input);
-
 }
+
 function setupEditSubmitButton() {
     submitBtn.addEventListener("click", async () => {
-        await createEditFormEventListener();
-        await location.reload();
-
+       closeModal();
     });
 }
-
 
 function setupSubmitButton() {
     submitBtn.addEventListener("click", async () => {
-        await createFormEventListener();
-        await location.reload();
-
+       closeModal();
     });
-}
-function createFormEventListener() {
-
-    form.addEventListener("submit", handleFormSubmit);
-
-}
-
-
-function createEditFormEventListener() {
-
-    form.addEventListener("submit", handleFormSubmitEdit);
-
-}
-
-async function handleFormSubmit(event) {
-    event.preventDefault();
-
-    const formEvent = event.currentTarget;
-    const url = formEvent.action;
-    console.log(url);
-
-    try {
-        const formData = new FormData(formEvent);
-        return await fetch(url, {method: "POST", body: formData});
-
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-async function handleFormSubmitEdit(event) {
-        event.preventDefault();
-
-    const formEvent = event.currentTarget;
-    const url = formEvent.action;
-    console.log(url);
-
-    try {
-        const formData = new FormData(formEvent);
-        console.log(formData);
-        return await fetch(url, {method: "PUT", body: formData});
-
-    } catch (err) {
-        console.log("ERROR ERROR ERROR")
-        console.log(err);
-    }
 }
 
 
@@ -270,7 +230,7 @@ function openModal() {
 
 function closeModal() {
     overlay.style.display = "none";
-    clearModal();
+    ///clearModal();
 }
 
 function clearModal() {

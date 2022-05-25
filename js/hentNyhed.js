@@ -7,27 +7,28 @@ async function loadNyheder() {
     for (let i = 0; i < nyhedListLength; i++) {
         const nyhed = nyhedList[i];
         const artikel = document.createElement("div");
-        if(i==0){
-            artikel.setAttribute("class", "førsteArtikel")
-        } else {
+        if(i!=0){
             artikel.setAttribute("class", "artikel");
+        } else {
+
+            artikel.setAttribute("class", "førsteArtikel")
         }
 
-
-        divContainer.appendChild(artikel);
 
         overskrift(artikel, nyhed);
         pTekst(artikel, nyhed, i);
         addButton(artikel, i);
+        console.log(artikel.introduktion + " " + artikel.overskrift)
+        divContainer.appendChild(artikel);
 
     }
 }
 function myFunction(i) {
-    var dots = document.getElementById("dots"+i);
-    var moreText = document.getElementById("more"+i);
-    var btnText = document.getElementById("btn"+i);
+    let dots = document.getElementById("dots"+i);
+    let moreText = document.getElementById("more"+i);
+    let btnText = document.getElementById("btn"+i);
 
-    if (dots.style.display === "none") {
+    if (dots.style.display.toString() === "none") {
         dots.style.display = "inline";
         btnText.innerHTML = "Læs mere";
         moreText.style.display = "none";
@@ -78,22 +79,9 @@ function pTekst(artikel, nyhed, i){
 function spanTekst(pTekst, nyhed, i){
     const spanTekst = document.createElement("span");
     spanTekst.setAttribute("id", "more"+i);
-    spanTekst.innerText = nyhed.tekst.resterendeTekst;
+    spanTekst.innerText = nyhed.resterendeTekst;
     spanTekst.style.display = 'none';
-    pTekst.appendChild(tekst);
-}
-function pris(col, hold){
-    const underoverskrift = document.createElement("h3");
-    underoverskrift.innerText = hold.pris;
-    col.appendChild(underoverskrift);
-
-}
-
-function ptekstitalic(col, hold){
-    const tekst = document.createElement("p");
-    tekst.innerText = hold.antalKursister;
-    tekst.setAttribute("style", "font-style: italic");
-    col.appendChild(tekst);
+    pTekst.appendChild(spanTekst);
 }
 
 
