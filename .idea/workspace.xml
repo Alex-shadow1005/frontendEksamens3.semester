@@ -12,11 +12,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_05_22__10_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_05_22__10_26__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__10_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__10_17__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__12_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_22__12_20__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/nyheder.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/nyheder.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/backoffice/holdBackoffice.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/backoffice/holdBackoffice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/holdtest.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/holdtest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/hundetræning.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hundetræning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/specifikthold.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/specifikthold.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
