@@ -119,7 +119,7 @@ async function loadSpecifiktHold() {
     showBackButton.setAttribute("style", "text-align: center");
     showBackButton.innerHTML = "<span>" + "Gå tilbage" + "</span>";
     showBackButton.addEventListener('click', () => {
-        window.location.href = "holdtest.html";
+        window.location.href = "hundetræning.html";
     });
     buttoncol3.appendChild(showBackButton);
 }
