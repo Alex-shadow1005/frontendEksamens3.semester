@@ -48,7 +48,7 @@ function editHold(hold) {
     createFileUpload("Billede",  "holdImage", "file");
 
 
-
+    createDeleteButton("http://localhost:8080/api/hold/" + hold.holdId)
     setupEditSubmitButton();
 
     openModal();
